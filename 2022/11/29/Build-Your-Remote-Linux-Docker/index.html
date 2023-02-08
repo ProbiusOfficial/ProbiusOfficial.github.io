@@ -16,79 +16,20 @@
   <meta name="author" content="Probius">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Author ：探姬原文于语雀发布，地址为：https:&#x2F;&#x2F;www.yuque.com&#x2F;probius&#x2F;cs_wp&#x2F;fegz0w  本文也有配套视频，建议结合食用：(给个三连吧www)https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1684y1z7L6 About本文档完整的流程可以帮助您在 Kali Linux上完成Docker环境，并且基于Vscode的Remote功能，利">
+    <meta name="description" content="本文档完整的流程可以帮助您在 Kali Linux 上完成Docker环境，并且基于Vscode的Remote功能，利用SSH协议，构建 VSCODE + SSH + Docker 的工作流，提高效率。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build-Your-Remote-Linux-Docker">
 <meta property="og:url" content="https://blog.probius.xyz/2022/11/29/Build-Your-Remote-Linux-Docker/index.html">
 <meta property="og:site_name" content="Probius_Official&#39;s Blog">
-<meta property="og:description" content="Author ：探姬原文于语雀发布，地址为：https:&#x2F;&#x2F;www.yuque.com&#x2F;probius&#x2F;cs_wp&#x2F;fegz0w  本文也有配套视频，建议结合食用：(给个三连吧www)https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1684y1z7L6 About本文档完整的流程可以帮助您在 Kali Linux上完成Docker环境，并且基于Vscode的Remote功能，利">
+<meta property="og:description" content="本文档完整的流程可以帮助您在 Kali Linux 上完成Docker环境，并且基于Vscode的Remote功能，利用SSH协议，构建 VSCODE + SSH + Docker 的工作流，提高效率。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108984.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108041.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108250.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108214.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108106.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108155.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108090.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108273.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108058.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108673.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108201.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108660.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108202.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108423.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108043.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108243.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108687.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108870.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108363.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108580.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108159.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108672.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108860.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108321.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108500.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108023.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108268.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108889.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108092.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108596.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108885.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108425.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108635.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108226.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108830.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108387.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108927.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108599.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108210.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108359.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108556.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108132.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108350.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108863.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108098.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108618.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108893.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108575.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108780.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108362.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108563.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108051.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108737.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108906.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108429.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108117.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108383.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108971.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108177.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108709.png">
+<meta property="og:image" content="https://i1.hdslb.com/bfs/archive/b56e6dfbd87fd430679534d81cc1a803af9148c2.jpg">
 <meta property="article:published_time" content="2022-11-29T14:53:51.000Z">
-<meta property="article:modified_time" content="2023-02-07T13:10:25.458Z">
+<meta property="article:modified_time" content="2023-02-08T08:33:05.570Z">
 <meta property="article:author" content="Probius">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nssctf.wdf.ink//img/WDTJ/202302072108984.png">
+<meta name="twitter:image" content="https://i1.hdslb.com/bfs/archive/b56e6dfbd87fd430679534d81cc1a803af9148c2.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -456,16 +397,16 @@
 <h3 id="Let-Vscode-Connect-to-host"><a href="#Let-Vscode-Connect-to-host" class="headerlink" title="Let Vscode Connect to host"></a>Let Vscode Connect to host</h3><p>连接方式有两种：<code>密码连接</code> 和 <code>ssh的公私钥</code>。<br>一般情况下我们使用密码连接，这样的方法安全性较低，而且每次连接和每次切换目录的时候都会要求输入密码，所以在确保能够密码连接情况下，我们可以进一步使用公私钥验证的方式来提升安全性和优化操作友好性。</p>
 <h4 id="Using-password-connection"><a href="#Using-password-connection" class="headerlink" title="Using password connection"></a>Using password connection</h4><p>打开vscode，点击左下角的远程连接（绿色的部分）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108580.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>接着在弹出的窗口中选择 Connect to Host<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108159.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选择 <code>Add New SSH Host</code>：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108672.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>按照要求输入对应的指令：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108860.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>IP可通过 <code>ip a</code> 获取<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108321.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><code>ssh kali@192.168.28.145 -A</code><br>保存位置默认第一个就好：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108500.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>然后连接：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108023.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选择对应的系统：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108268.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选择继续：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108889.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>输入密码：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108092.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>初始化完成后就连接上了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108596.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h4 id="Using-public-and-private-keys"><a href="#Using-public-and-private-keys" class="headerlink" title="Using public and private keys"></a>Using public and private keys</h4><h5 id="Create-public-and-private-keys"><a href="#Create-public-and-private-keys" class="headerlink" title="Create public and private keys"></a>Create public and private keys</h5><p>首先在本机上生成对应的公钥私钥：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">ssh-keygen<br></code></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">ssh-keygen</span><br></code></pre></td></tr></table></figure>
 
 <p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108885.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Enter file in which to save the key (C:\Users\Probius/.ssh/id_rsa):<br></code></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle">Enter <span class="hljs-keyword">file</span> in which to save the key (C:\Users\Probius<span class="hljs-regexp">/.ssh/i</span>d_rsa):<br></code></pre></td></tr></table></figure>
 
 <p>输入保存路径，如果为空默认为 <code>C:\Users\USERNAME/.ssh/id_rsa</code>，这里笔者直接输入了名字，让其以该名字直接保存在当前目录</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Enter passphrase (empty for no passphrase):<br></code></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">Enter</span> passphrase (empty for <span class="hljs-literal">no</span> passphrase):<br></code></pre></td></tr></table></figure>
 
 <p>输入私钥密码，为空则没有</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Enter same passphrase again:<br></code></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-built_in">Enter</span> <span class="hljs-variable">same</span> <span class="hljs-variable">passphrase</span> <span class="hljs-variable">again</span><span class="hljs-operator">:</span><br></code></pre></td></tr></table></figure>
 
 <p>注意：如果您使用了私钥密码，那么在进行ssh登录的时候，会提示您输入私钥密码，相当于再使用公私钥登录的情况下又加了一层密码，安全性有很大的提升，但是这样会变得和密码登录一样每次都要输入，这里笔者建议，如果是本地一路回车就好了，如果是远程资源的管理，可以综合安全性考虑<br>生成过后，得到的<code>id_rsa.pub</code>(Kali_test.pub)是<strong>公钥</strong>，<code>id_rsa</code>(Kali_test)是**私钥 **<br>将得到的私钥放在我们的.ssh(C:\Users\USERNAME.ssh)中。<br>(您也可以在生成的时候就让他防止在此，当然这并不是重点）</p>
 <h5 id="Configuring-Remote-Host"><a href="#Configuring-Remote-Host" class="headerlink" title="Configuring Remote Host"></a>Configuring Remote Host</h5><p>将得到的公钥上传到 Kali&#x2F;服务器中对应用户的.ssh文件夹中(请确保该文件夹至少有700的权限)：<br>（注意 kali默认没有该文件夹，需要用户手动创建，并且赋700权限 <code>mkdir ~/.ssh</code> ）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108425.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>在此处打开终端，用公钥文件来生成 authorized_keys：</p>
@@ -488,7 +429,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh USERNAME@IP -i C:\\Users\\Probius\\.ssh\\RAS_ID<br></code></pre></td></tr></table></figure>
 
 <p>（注意使用指令添加时，务必使用双斜杠）<br>当然，也可以在已经添加的配置文件上改：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">Host 192.168.28.145<br>	HostName 192.168.28.145<br>	User kali<br>	IdentityFile C:\Users\Probius\.ssh\Kali_test<br></code></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">Host <span class="hljs-number">192.168</span>.<span class="hljs-number">28.145</span><br>	HostName <span class="hljs-number">192.168</span>.<span class="hljs-number">28.145</span><br>	<span class="hljs-keyword">User</span> <span class="hljs-title">kali</span><br>	IdentityFile C:\Users\Probius\.ssh\Kali_test<br></code></pre></td></tr></table></figure>
 
 <p>如果操作无误，且没有设置私钥密码，那么点击连接之后无需其他额外操作即可连接；如果设置了私钥密码，那么按照提示输入即可。</p>
 <h5 id="Other-About-SSH-key-login"><a href="#Other-About-SSH-key-login" class="headerlink" title="Other_About SSH key login"></a>Other_About SSH key login</h5><p>关于ssh密钥登录的更多知识可以看这一篇文章：</p>
@@ -538,15 +479,8 @@
     
       <span class="category-chain">
         
-  <a href="/categories/CTF/" class="category-chain-item">CTF</a>
+  <a href="/categories/Develop/" class="category-chain-item">Develop</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/CTF/Develop/" class="category-chain-item">Develop</a>
-  
-  
-
   
 
       </span>
@@ -617,9 +551,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/07/Filter/" title="Filter">
+                      <a href="/2023/02/07/Filter/" title="浅谈Filter链">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Filter</span>
+                        <span class="hidden-mobile">浅谈Filter链</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

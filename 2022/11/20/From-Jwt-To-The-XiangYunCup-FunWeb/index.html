@@ -16,38 +16,20 @@
   <meta name="author" content="Probius">
   <meta name="keywords" content="">
   
-    <meta name="description" content="About JWTWhat is JWTJson Web Token(JWT)是一个开放标准(RFC 7519)，它定义了一种紧凑且自包含的方式，用于在各方之间安全地传输信息作为JSON对象。此信息可以验证和信任，因为它足数字签名的。JWT可以使用密钥(使用 HMAC算法)或便用RSA或 ECDSA 的公钥&#x2F;私钥对进行签名。  注意：本文的重心并不在介绍JWT上，所以在官方文本的基础上会">
+    <meta name="description" content="针对祥云杯中一道基于pythonJWT的Nday题目，谈谈Jwt和它存在的一些安全问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="From Jwt To The XiangYunCup FunWeb">
 <meta property="og:url" content="https://blog.probius.xyz/2022/11/20/From-Jwt-To-The-XiangYunCup-FunWeb/index.html">
 <meta property="og:site_name" content="Probius_Official&#39;s Blog">
-<meta property="og:description" content="About JWTWhat is JWTJson Web Token(JWT)是一个开放标准(RFC 7519)，它定义了一种紧凑且自包含的方式，用于在各方之间安全地传输信息作为JSON对象。此信息可以验证和信任，因为它足数字签名的。JWT可以使用密钥(使用 HMAC算法)或便用RSA或 ECDSA 的公钥&#x2F;私钥对进行签名。  注意：本文的重心并不在介绍JWT上，所以在官方文本的基础上会">
+<meta property="og:description" content="针对祥云杯中一道基于pythonJWT的Nday题目，谈谈Jwt和它存在的一些安全问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667407544497-f7e889c1-fedb-474e-bd81-57d3cdeb67a1.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667409378048-06076958-9b69-42c2-8f0a-2809a7b250b3.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667412576430-2fd13d4e-8f7f-4cb6-b084-e8e9d5b7036c.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667832274679-a093cb89-0329-4557-9917-46ad794742b5.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667835816438-f3804cff-1113-48bf-87d2-c39f6138eb8d.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667840468890-8287cdc1-a5bd-4d5b-ba08-abc6165b11b8.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667845643643-eebf4026-3cc5-4319-a90a-583b1cdc0edf.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667847065180-579c6d06-711c-4c2b-acdc-8bc854a46812.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667847767154-29fdc9b4-817c-4e39-9ba6-80335b838f62.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667847750329-8f0cc9f5-9ae8-46d8-bad9-555ee2173e64.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667899778186-b6a9fa71-efbe-4f8d-a1b8-5d5e096f4dca.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667899843564-133b73ed-452e-47eb-8a29-2ad42fbaaf93.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667900973813-aeafc668-6cc6-4b9c-b463-3d30067a05db.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667900984656-9ad6c80f-1f9b-4476-b745-accfd26a5c2d.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667904382380-0852286f-3e43-4392-a634-d2e06fccb725.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667904433899-179df22b-189f-4163-9fdf-0405bab08f04.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667904553790-eab830ae-f17a-4a29-9452-529e1bc6ed91.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667904579739-cdd029cb-ae8a-441e-8526-fa78c736ab21.png">
-<meta property="og:image" content="https://nssctf.wdf.ink//img/WDTJ/1667904603214-9d2949a7-2a36-4224-b800-b6422ec42084.png">
+<meta property="og:image" content="https://i1.hdslb.com/bfs/archive/3e9c743354ccd3a89f4e4ceccbddd0e19c0f463d.jpg">
 <meta property="article:published_time" content="2022-11-19T17:22:22.000Z">
-<meta property="article:modified_time" content="2023-02-07T12:53:15.438Z">
+<meta property="article:modified_time" content="2023-02-08T08:32:47.275Z">
 <meta property="article:author" content="Probius">
 <meta property="article:tag" content="Web">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nssctf.wdf.ink//img/WDTJ/1667407544497-f7e889c1-fedb-474e-bd81-57d3cdeb67a1.png">
+<meta name="twitter:image" content="https://i1.hdslb.com/bfs/archive/3e9c743354ccd3a89f4e4ceccbddd0e19c0f463d.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -404,7 +386,7 @@
 
 <p>上header指定了签名算法为<code>HS256</code>，意味着服务端利用此算法将header和payload进行加密，形成signature，同时接收到token时，也会利用此算法对signature进行签名验证。</p>
 <p>如果后端程序信任来源的JWT头部，那么当我们改变器头部算法，将其置空设置为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">None<br></code></pre></td></tr></table></figure>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-built_in">None</span><br></code></pre></td></tr></table></figure>
 
 <p>那么服务端接收到token后会将其认定为无加密算法， 于是对signature的检验也就失效了，那么我们就可以随意修改payload部分伪造token。</p>
 <p>当然这一切的前提是，后端信任前端。</p>
