@@ -19,7 +19,7 @@
     <meta name="description" content="本文档完整的流程可以帮助您在 Kali Linux 上完成Docker环境，并且基于Vscode的Remote功能，利用SSH协议，构建 VSCODE + SSH + Docker 的工作流，提高效率。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build-Your-Remote-Linux-Docker">
-<meta property="og:url" content="https://github.com/ProbiusOfficial/ProbiusOfficial.github.io/2022/11/29/Build-Your-Remote-Linux-Docker/index.html">
+<meta property="og:url" content="https://blog.probius.xyz/2022/11/29/Build-Your-Remote-Linux-Docker/index.html">
 <meta property="og:site_name" content="Probius_Official&#39;s Blog">
 <meta property="og:description" content="本文档完整的流程可以帮助您在 Kali Linux 上完成Docker环境，并且基于Vscode的Remote功能，利用SSH协议，构建 VSCODE + SSH + Docker 的工作流，提高效率。">
 <meta property="og:locale" content="zh_CN">
@@ -59,12 +59,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/main.css" />
+<link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
@@ -73,15 +73,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"github.com","root":"/ProbiusOfficial/ProbiusOfficial.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-Z6B9XVRJ8K","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/ProbiusOfficial/ProbiusOfficial.github.io/local-search.xml"};
+    var CONFIG = {"hostname":"blog.probius.xyz","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-Z6B9XVRJ8K","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/utils.js" ></script>
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/color-schema.js" ></script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
   
 
   
@@ -125,7 +125,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/ProbiusOfficial/ProbiusOfficial.github.io/">
+    <a class="navbar-brand" href="/">
       <strong>探姬の星灵枢纽</strong>
     </a>
 
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/">
+              <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -156,7 +156,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/archives/">
+              <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -168,7 +168,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/categories/">
+              <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -180,7 +180,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/tags/">
+              <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -192,7 +192,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/about/">
+              <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -204,7 +204,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/links/">
+              <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -330,23 +330,23 @@
 </blockquote>
 <p>本文也有配套视频，建议结合食用：(给个三连吧www)<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1684y1z7L6">https://www.bilibili.com/video/BV1684y1z7L6</a></p>
 <h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>本文档完整的流程可以帮助您在 <strong>Kali Linux</strong>上完成Docker环境，并且基于Vscode的Remote功能，利用SSH协议，构建 VSCODE + SSH + Docker 的工作流，提高效率。<br>同样，本文档也考虑了非Kali，用于开发&#x2F;生产环境的 <strong>Ubuntu &#x2F; Debian</strong> 系统 ，如果您想要在开发&#x2F;生产中使用该工作流，可以直接从 <strong>Get Docker</strong>或者 <strong>Build SSH＋vscode + docker Workflow</strong>章节开始。<br>笔者水平有限，错误疏漏之处在所难免，烦请各位师傅斧正。<br>以及非常感谢 **陈橘墨(@*<em>Randark_JMT*</em>)师傅**提供的帮助。</p>
-<h2 id="Get-Kali"><a href="#Get-Kali" class="headerlink" title="Get Kali"></a>Get Kali</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>在Kali官网下载即可，建议直接下载封装好的虚拟机版本：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108984.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>解压下载好的压缩包到您想要放置虚拟机的位置，然后双击配置文件直接打开自动添加，或者在VMware中手动添加：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108041.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>添加完成后，启动即可：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108250.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>（当然，作为DockerRuner，您可能需要设置一个稍微大点的内存值）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108214.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<h2 id="Get-Kali"><a href="#Get-Kali" class="headerlink" title="Get Kali"></a>Get Kali</h2><h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>在Kali官网下载即可，建议直接下载封装好的虚拟机版本：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108984.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>解压下载好的压缩包到您想要放置虚拟机的位置，然后双击配置文件直接打开自动添加，或者在VMware中手动添加：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108041.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>添加完成后，启动即可：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108250.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>（当然，作为DockerRuner，您可能需要设置一个稍微大点的内存值）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108214.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h3 id="ChangeResource？"><a href="#ChangeResource？" class="headerlink" title="ChangeResource？"></a>ChangeResource？</h3><p>笔者并不建议换源，Kali官方源的速度还是不错的，换源可能会导致您软件管理出现问题。</p>
 <h2 id="Get-Docker"><a href="#Get-Docker" class="headerlink" title="Get Docker"></a>Get Docker</h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>docker安装目前有两个版本，一个是官方的<strong>docker.ce</strong>版本，一个是有Debian团队维护的**<a target="_blank" rel="noopener" href="http://docker.io/">docker.io</a>**版本。<br>之前有争议说 <a target="_blank" rel="noopener" href="http://docker.io/">docker.io</a> 是旧版本的docker 而新版的docker是 dockers.ce<br>然而docker.io的版本有时会比docker.ce高，事实上，两者只是负责维护的组织不同，前者是Debian官方维护，后者则为Docker官方维护，并没后新旧之分：</p>
 <h4 id="docker-io"><a href="#docker-io" class="headerlink" title="docker.io"></a><a target="_blank" rel="noopener" href="http://docker.io/">docker.io</a></h4><p>该版本由Debian团队维护，采用 apt 的方式管理依赖<br>安装过程：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get update<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108106.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108106.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install docker.io<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108155.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108090.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108155.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108090.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h4 id="docker-ce"><a href="#docker-ce" class="headerlink" title="docker.ce"></a>docker.ce</h4><p>由docker官方维护的版本，采用 go 的方式管理依赖，如果您要在开发&#x2F;生产环境中使用docker，推荐使用该版本。<br>如果您的Linux版本为Ubuntu&#x2F;Debian，可以使用一下命令自动安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget -qO- https://get.docker.com/ | sh<br></code></pre></td></tr></table></figure>
 
 <p>（注意，Docker并不支持Kali一键安装，同样笔者也不推荐您用kali作为开发生产环境，Kali满足日常需要，使用io版本即可，当然您也可以使用.ce版本的手动安装）<br>手动安装：<br>可以参考Docker官方的 Docker Engine安装步骤：<br>但是该步骤在 Kali Linux上面可能会存在一定问题，以Kali为例，完整的按照流程如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get update<br>sudo apt-get install \<br>    ca-certificates \<br>    curl \<br>    gnupg \<br>    lsb-release<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108273.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>选项选择Yes就好。<br>然后按照官网提示，添加Docker官方的 GPG key：</p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108273.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选项选择Yes就好。<br>然后按照官网提示，添加Docker官方的 GPG key：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">mkdir</span> -p /etc/apt/keyrings<br>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg<br></code></pre></td></tr></table></figure>
 
 <p>然后设置仓库：</p>
@@ -356,7 +356,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get update<br>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin<br></code></pre></td></tr></table></figure>
 
 <p>随后，如果您是Kali Linux，您可能会遭遇以下报错：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108058.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108673.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>这是由于Docker官方并没有提供直接支持Kali的源，所以我们使用Debian的源就好：</p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108058.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108673.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>这是由于Docker官方并没有提供直接支持Kali的源，所以我们使用Debian的源就好：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;%s\n&quot;</span> <span class="hljs-string">&quot;deb [arch=amd64] https://download.docker.com/linux/debian buster stable&quot;</span> |\<br>sudo <span class="hljs-built_in">tee</span> /etc/apt/sources.list.d/docker-ce.list<br></code></pre></td></tr></table></figure>
 
 <p>并且添加对应的密钥：</p>
@@ -368,38 +368,38 @@
 <p>此时再跑一次 <code>sudo apt-get update</code>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get update<br></code></pre></td></tr></table></figure>
 
-<p>您可能会遇到一个找不到的源，这个是正常的。<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108201.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>接下来安装docker：</p>
+<p>您可能会遇到一个找不到的源，这个是正常的。<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108201.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>接下来安装docker：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin<br></code></pre></td></tr></table></figure>
 
-<p>就能正常获取了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108660.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>安装完成后，执行hello-world，得到图示则安装成功。</p>
+<p>就能正常获取了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108660.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>安装完成后，执行hello-world，得到图示则安装成功。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo docker run hello-world<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108202.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h3 id="DockerHub"><a href="#DockerHub" class="headerlink" title="DockerHub"></a>DockerHub</h3><p>尝试登录您的<strong>DockerHub</strong>账号：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108423.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>如果出现类似错误，请手动配置DNS：</p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108202.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="DockerHub"><a href="#DockerHub" class="headerlink" title="DockerHub"></a>DockerHub</h3><p>尝试登录您的<strong>DockerHub</strong>账号：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108423.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>如果出现类似错误，请手动配置DNS：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/resolv.conf<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108043.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>保存，再次尝试即可成功登录：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108243.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108043.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>保存，再次尝试即可成功登录：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108243.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h2 id="Build-SSH＋vscode-docker-Workflow"><a href="#Build-SSH＋vscode-docker-Workflow" class="headerlink" title="Build SSH＋vscode + docker Workflow"></a>Build SSH＋vscode + docker Workflow</h2><p>该步骤适用于支持SSH协议的Linux（废话，哪个Linux没有个SSH），除了在本地的Kali或者其他Linux上面构建，也支持远程构建该工作流。</p>
-<h3 id="Start-SSH-Service"><a href="#Start-SSH-Service" class="headerlink" title="Start SSH Service"></a>Start SSH Service</h3><h4 id="Kali-Linux"><a href="#Kali-Linux" class="headerlink" title="Kali Linux"></a>Kali Linux</h4><p>Kali虚拟机默认是没有开启ssh服务的 （ssh状态：<code>/etc/init.d/ssh status</code>）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108687.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>所以需要手动启动一下：</p>
+<h3 id="Start-SSH-Service"><a href="#Start-SSH-Service" class="headerlink" title="Start SSH Service"></a>Start SSH Service</h3><h4 id="Kali-Linux"><a href="#Kali-Linux" class="headerlink" title="Kali Linux"></a>Kali Linux</h4><p>Kali虚拟机默认是没有开启ssh服务的 （ssh状态：<code>/etc/init.d/ssh status</code>）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108687.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>所以需要手动启动一下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo /etc/init.d/ssh start <br></code></pre></td></tr></table></figure>
 
 <p>当然，为了方便，我们将ssh添加到开机自启中：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo update-rc.d ssh <span class="hljs-built_in">enable</span><br><span class="hljs-comment"># Or use:</span><br>systemctl <span class="hljs-built_in">enable</span> ssh.service<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108870.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>启动之后就可以开始后面的步骤了。</p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108870.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>启动之后就可以开始后面的步骤了。</p>
 <h4 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h4><p>由于ubuntu默认不自带openssh-server，所以这里需要手动安装。<br>安装openssh-server：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install openssh-server<br></code></pre></td></tr></table></figure>
 
 <p>安装完成后启动服务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo service ssh start<br></code></pre></td></tr></table></figure>
 
-<h3 id="Get-Remote-SSH"><a href="#Get-Remote-SSH" class="headerlink" title="Get Remote - SSH"></a>Get Remote - SSH</h3><p>为了使用vscode的远程ssh功能 您可能需要在扩展中安装<code>Remote - SSH</code>插件：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108363.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="Get-Remote-SSH"><a href="#Get-Remote-SSH" class="headerlink" title="Get Remote - SSH"></a>Get Remote - SSH</h3><p>为了使用vscode的远程ssh功能 您可能需要在扩展中安装<code>Remote - SSH</code>插件：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108363.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h3 id="Let-Vscode-Connect-to-host"><a href="#Let-Vscode-Connect-to-host" class="headerlink" title="Let Vscode Connect to host"></a>Let Vscode Connect to host</h3><p>连接方式有两种：<code>密码连接</code> 和 <code>ssh的公私钥</code>。<br>一般情况下我们使用密码连接，这样的方法安全性较低，而且每次连接和每次切换目录的时候都会要求输入密码，所以在确保能够密码连接情况下，我们可以进一步使用公私钥验证的方式来提升安全性和优化操作友好性。</p>
-<h4 id="Using-password-connection"><a href="#Using-password-connection" class="headerlink" title="Using password connection"></a>Using password connection</h4><p>打开vscode，点击左下角的远程连接（绿色的部分）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108580.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>接着在弹出的窗口中选择 Connect to Host<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108159.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>选择 <code>Add New SSH Host</code>：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108672.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>按照要求输入对应的指令：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108860.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>IP可通过 <code>ip a</code> 获取<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108321.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br><code>ssh kali@192.168.28.145 -A</code><br>保存位置默认第一个就好：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108500.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>然后连接：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108023.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>选择对应的系统：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108268.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>选择继续：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108889.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>输入密码：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108092.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>初始化完成后就连接上了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108596.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="Using-password-connection"><a href="#Using-password-connection" class="headerlink" title="Using password connection"></a>Using password connection</h4><p>打开vscode，点击左下角的远程连接（绿色的部分）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108580.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>接着在弹出的窗口中选择 Connect to Host<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108159.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选择 <code>Add New SSH Host</code>：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108672.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>按照要求输入对应的指令：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108860.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>IP可通过 <code>ip a</code> 获取<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108321.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><code>ssh kali@192.168.28.145 -A</code><br>保存位置默认第一个就好：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108500.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>然后连接：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108023.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选择对应的系统：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108268.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>选择继续：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108889.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>输入密码：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108092.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>初始化完成后就连接上了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108596.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h4 id="Using-public-and-private-keys"><a href="#Using-public-and-private-keys" class="headerlink" title="Using public and private keys"></a>Using public and private keys</h4><h5 id="Create-public-and-private-keys"><a href="#Create-public-and-private-keys" class="headerlink" title="Create public and private keys"></a>Create public and private keys</h5><p>首先在本机上生成对应的公钥私钥：</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">ssh-keygen</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108885.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108885.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle">Enter <span class="hljs-keyword">file</span> in which to save the key (C:\Users\Probius<span class="hljs-regexp">/.ssh/i</span>d_rsa):<br></code></pre></td></tr></table></figure>
 
 <p>输入保存路径，如果为空默认为 <code>C:\Users\USERNAME/.ssh/id_rsa</code>，这里笔者直接输入了名字，让其以该名字直接保存在当前目录</p>
@@ -409,10 +409,10 @@
 <figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-built_in">Enter</span> <span class="hljs-variable">same</span> <span class="hljs-variable">passphrase</span> <span class="hljs-variable">again</span><span class="hljs-operator">:</span><br></code></pre></td></tr></table></figure>
 
 <p>注意：如果您使用了私钥密码，那么在进行ssh登录的时候，会提示您输入私钥密码，相当于再使用公私钥登录的情况下又加了一层密码，安全性有很大的提升，但是这样会变得和密码登录一样每次都要输入，这里笔者建议，如果是本地一路回车就好了，如果是远程资源的管理，可以综合安全性考虑<br>生成过后，得到的<code>id_rsa.pub</code>(Kali_test.pub)是<strong>公钥</strong>，<code>id_rsa</code>(Kali_test)是**私钥 **<br>将得到的私钥放在我们的.ssh(C:\Users\USERNAME.ssh)中。<br>(您也可以在生成的时候就让他防止在此，当然这并不是重点）</p>
-<h5 id="Configuring-Remote-Host"><a href="#Configuring-Remote-Host" class="headerlink" title="Configuring Remote Host"></a>Configuring Remote Host</h5><p>将得到的公钥上传到 Kali&#x2F;服务器中对应用户的.ssh文件夹中(请确保该文件夹至少有700的权限)：<br>（注意 kali默认没有该文件夹，需要用户手动创建，并且赋700权限 <code>mkdir ~/.ssh</code> ）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108425.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>在此处打开终端，用公钥文件来生成 authorized_keys：</p>
+<h5 id="Configuring-Remote-Host"><a href="#Configuring-Remote-Host" class="headerlink" title="Configuring Remote Host"></a>Configuring Remote Host</h5><p>将得到的公钥上传到 Kali&#x2F;服务器中对应用户的.ssh文件夹中(请确保该文件夹至少有700的权限)：<br>（注意 kali默认没有该文件夹，需要用户手动创建，并且赋700权限 <code>mkdir ~/.ssh</code> ）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108425.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>在此处打开终端，用公钥文件来生成 authorized_keys：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> id_ras.pub &gt;&gt; authorized_keys<br><span class="hljs-comment"># 此处既 cat Kali_test.pub &gt;&gt; authorized_keys</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108635.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>由于Linux系统对.ssh拥有比较严格的权限限制，请确保权限配置正确：</p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108635.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>由于Linux系统对.ssh拥有比较严格的权限限制，请确保权限配置正确：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chmod</span> 600 authorized_keys<br>sudo <span class="hljs-built_in">chmod</span> 700 ~/.ssh<br></code></pre></td></tr></table></figure>
 
 <p>编辑ssh配置文件</p>
@@ -421,11 +421,11 @@
 <p>确保拥有以下条目：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">RSAAuthentication <span class="hljs-built_in">yes</span><br>PubkeyAuthentication <span class="hljs-built_in">yes</span><br></code></pre></td></tr></table></figure>
 
-<p>注意Kali的ssh默认配置是没有上诉两项的，需要自行添加：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108226.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>然后搞定一切后 重启SSH服务：</p>
+<p>注意Kali的ssh默认配置是没有上诉两项的，需要自行添加：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108226.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>然后搞定一切后 重启SSH服务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo service ssh restart<br></code></pre></td></tr></table></figure>
 
 <p>Linux部分的配置这样就搞定啦~<br>（在您确保您的连接无误后，如果是服务器等远程设备，可以在config中关闭密码登录以提升安全性：<br><code>PasswordAuthentication no</code>）</p>
-<h5 id="Configuring-Local-Host"><a href="#Configuring-Local-Host" class="headerlink" title="Configuring Local Host"></a>Configuring Local Host</h5><p>然后是Windows，也就是vscode这边的配置：<br>添加NewHost：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108830.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>使用：</p>
+<h5 id="Configuring-Local-Host"><a href="#Configuring-Local-Host" class="headerlink" title="Configuring Local Host"></a>Configuring Local Host</h5><p>然后是Windows，也就是vscode这边的配置：<br>添加NewHost：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108830.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>使用：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh USERNAME@IP -i C:\\Users\\Probius\\.ssh\\RAS_ID<br></code></pre></td></tr></table></figure>
 
 <p>（注意使用指令添加时，务必使用双斜杠）<br>当然，也可以在已经添加的配置文件上改：</p>
@@ -433,8 +433,8 @@
 
 <p>如果操作无误，且没有设置私钥密码，那么点击连接之后无需其他额外操作即可连接；如果设置了私钥密码，那么按照提示输入即可。</p>
 <h5 id="Other-About-SSH-key-login"><a href="#Other-About-SSH-key-login" class="headerlink" title="Other_About SSH key login"></a>Other_About SSH key login</h5><p>关于ssh密钥登录的更多知识可以看这一篇文章：</p>
-<h3 id="Get-The-Docker-Extension"><a href="#Get-The-Docker-Extension" class="headerlink" title="Get The Docker Extension"></a>Get The Docker Extension</h3><h4 id="Install-extension"><a href="#Install-extension" class="headerlink" title="Install extension"></a>Install extension</h4><p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108387.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>（当然 如果显示的是 <code>安装</code>也是一样的）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108927.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h4 id="Solve-error"><a href="#Solve-error" class="headerlink" title="Solve error"></a>Solve error</h4><p>如果您使用自动安装，应该不会遇到该问题，自动安装的sh会自动完成用户组添加的操作。<br>由于权限原因，我们可能无法访问到 <code>/var/run/docker.sock</code><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108599.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="Get-The-Docker-Extension"><a href="#Get-The-Docker-Extension" class="headerlink" title="Get The Docker Extension"></a>Get The Docker Extension</h3><h4 id="Install-extension"><a href="#Install-extension" class="headerlink" title="Install extension"></a>Install extension</h4><p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108387.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>（当然 如果显示的是 <code>安装</code>也是一样的）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108927.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="Solve-error"><a href="#Solve-error" class="headerlink" title="Solve error"></a>Solve error</h4><p>如果您使用自动安装，应该不会遇到该问题，自动安装的sh会自动完成用户组添加的操作。<br>由于权限原因，我们可能无法访问到 <code>/var/run/docker.sock</code><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108599.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h5 id="By-add-user-group"><a href="#By-add-user-group" class="headerlink" title="By add user group"></a>By add user group</h5><p>一劳永逸的解决权限问题，将当前用户组添加到docker组即可。<br>创建docker用户组，默认安装时就会自动创建，所以执行可能会显示<code>exist</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo groupadd docker <br></code></pre></td></tr></table></figure>
 
@@ -447,20 +447,20 @@
 <p>再次重新登入即可，如果重新登录之后依旧报错无法读取，请尝试重启：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">reboot<br></code></pre></td></tr></table></figure>
 
-<h5 id="By-chmod"><a href="#By-chmod" class="headerlink" title="By chmod"></a>By chmod</h5><p>也可以使用<code>sudo chmod 777 /var/run/docker.sock</code>，但是每次重启之后权限都会重置，不推荐<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108210.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>然后就能正常访问了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108359.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h3 id="Start-Use"><a href="#Start-Use" class="headerlink" title="Start Use"></a>Start Use</h3><p>（以下操作使用<strong>DockerHub</strong>演示）<br>因为在安装Docker的时候登录过DockerHub所以这里连接之后，系统会自动获取您的凭证，您可以在这查看您的DockerHub仓库：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108556.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>当然，您也可以添加其他仓库，具体的用法可以参考官方文档：</p>
-<h4 id="Pull-Image"><a href="#Pull-Image" class="headerlink" title="Pull Image"></a>Pull Image</h4><p>当然 对于自己仓库的镜像还是比较方便的233：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108132.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>当然如果是公开镜像的话 还是免不了指令啦，不过还是比较方便的，旁边就是终端：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108350.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>完成之后就能在IMAGES栏看到了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108863.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<h5 id="By-chmod"><a href="#By-chmod" class="headerlink" title="By chmod"></a>By chmod</h5><p>也可以使用<code>sudo chmod 777 /var/run/docker.sock</code>，但是每次重启之后权限都会重置，不推荐<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108210.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>然后就能正常访问了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108359.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="Start-Use"><a href="#Start-Use" class="headerlink" title="Start Use"></a>Start Use</h3><p>（以下操作使用<strong>DockerHub</strong>演示）<br>因为在安装Docker的时候登录过DockerHub所以这里连接之后，系统会自动获取您的凭证，您可以在这查看您的DockerHub仓库：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108556.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>当然，您也可以添加其他仓库，具体的用法可以参考官方文档：</p>
+<h4 id="Pull-Image"><a href="#Pull-Image" class="headerlink" title="Pull Image"></a>Pull Image</h4><p>当然 对于自己仓库的镜像还是比较方便的233：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108132.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>当然如果是公开镜像的话 还是免不了指令啦，不过还是比较方便的，旁边就是终端：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108350.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>完成之后就能在IMAGES栏看到了：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108863.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h4 id="Run-Docker"><a href="#Run-Docker" class="headerlink" title="Run Docker"></a>Run Docker</h4><p>运行容器有两个选项Run &#x2F; Run Ineractive</p>
-<h5 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h5><p>默认后台运行，Run执行后效果和在Linux执行 -d的效果相同：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108098.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108618.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h5 id="Run-Interacitve"><a href="#Run-Interacitve" class="headerlink" title="Run Interacitve"></a>Run Interacitve</h5><p>该选项运行执行后，除了运行容器，还会跳到容器的汇总shell处，这里会实时打印容器日志，<br>效果和 <code>View Log</code>效果相同：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108893.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h4 id="View-Log"><a href="#View-Log" class="headerlink" title="View Log"></a>View Log</h4><p>直达容器后台日志，如果在运行的时候选择<code>Run Interacitve</code>那么也会跳转到该log页面。<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108575.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108780.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h4 id="Attach-Shell"><a href="#Attach-Shell" class="headerlink" title="Attach Shell"></a>Attach Shell</h4><p>右键选中之后可以直接建立一个容器内部的shell，省去<code>docker exec -i -t ID /bin/bash</code><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108362.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108563.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h4 id="Edit-Container"><a href="#Edit-Container" class="headerlink" title="Edit Container"></a>Edit Container</h4><p>在CONTAINERS中下拉一个容器的file可以对其进行查看和编辑：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108051.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>可以看到对于容器来说 修改是即时的（支持热更新的）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108737.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h4 id="Attach-Container（Advanced-Edit？）"><a href="#Attach-Container（Advanced-Edit？）" class="headerlink" title="Attach Container（Advanced Edit？）"></a>Attach Container（Advanced Edit？）</h4><p>我们也可以用Vscode建立类似SSH的连接，直接连接到整个容器：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108906.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>并且操作同步：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108429.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>而且容器支持文件拖拽，相比单纯的COPY指令 拥有更好的体验（个人感觉</p>
-<h4 id="Port-Forward"><a href="#Port-Forward" class="headerlink" title="Port Forward"></a>Port Forward</h4><p>通过SSH直接将远程端口转发到本地，免除防火墙困扰ww<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108117.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br>一般来讲在您启动容器的时候 vscode会自动配置 当然为了更好的区分和避免冲突 也可以手动分配<br>配置如图：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108383.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
-<h4 id="Open-in-Borrow"><a href="#Open-in-Borrow" class="headerlink" title="Open in Borrow"></a>Open in Borrow</h4><p>如果您配置完成了端口转发(或者vscode自动为您完成配置）那么点击Open in Borrow将在您的默认浏览器中快速打开该端口对应的页面：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108971.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108177.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<h5 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h5><p>默认后台运行，Run执行后效果和在Linux执行 -d的效果相同：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108098.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108618.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h5 id="Run-Interacitve"><a href="#Run-Interacitve" class="headerlink" title="Run Interacitve"></a>Run Interacitve</h5><p>该选项运行执行后，除了运行容器，还会跳到容器的汇总shell处，这里会实时打印容器日志，<br>效果和 <code>View Log</code>效果相同：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108893.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="View-Log"><a href="#View-Log" class="headerlink" title="View Log"></a>View Log</h4><p>直达容器后台日志，如果在运行的时候选择<code>Run Interacitve</code>那么也会跳转到该log页面。<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108575.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108780.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="Attach-Shell"><a href="#Attach-Shell" class="headerlink" title="Attach Shell"></a>Attach Shell</h4><p>右键选中之后可以直接建立一个容器内部的shell，省去<code>docker exec -i -t ID /bin/bash</code><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108362.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108563.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="Edit-Container"><a href="#Edit-Container" class="headerlink" title="Edit Container"></a>Edit Container</h4><p>在CONTAINERS中下拉一个容器的file可以对其进行查看和编辑：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108051.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>可以看到对于容器来说 修改是即时的（支持热更新的）<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108737.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="Attach-Container（Advanced-Edit？）"><a href="#Attach-Container（Advanced-Edit？）" class="headerlink" title="Attach Container（Advanced Edit？）"></a>Attach Container（Advanced Edit？）</h4><p>我们也可以用Vscode建立类似SSH的连接，直接连接到整个容器：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108906.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>并且操作同步：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108429.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>而且容器支持文件拖拽，相比单纯的COPY指令 拥有更好的体验（个人感觉</p>
+<h4 id="Port-Forward"><a href="#Port-Forward" class="headerlink" title="Port Forward"></a>Port Forward</h4><p>通过SSH直接将远程端口转发到本地，免除防火墙困扰ww<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108117.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>一般来讲在您启动容器的时候 vscode会自动配置 当然为了更好的区分和避免冲突 也可以手动分配<br>配置如图：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108383.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="Open-in-Borrow"><a href="#Open-in-Borrow" class="headerlink" title="Open in Borrow"></a>Open in Borrow</h4><p>如果您配置完成了端口转发(或者vscode自动为您完成配置）那么点击Open in Borrow将在您的默认浏览器中快速打开该端口对应的页面：<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108971.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108177.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h4 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h4><p>其他用法，就请佬们自行探索啦ww</p>
-<h2 id="ExtensionRecommend"><a href="#ExtensionRecommend" class="headerlink" title="ExtensionRecommend"></a>ExtensionRecommend</h2><h3 id="Thunder-Client"><a href="#Thunder-Client" class="headerlink" title="Thunder Client"></a>Thunder Client</h3><p>Thunder Client is a lightweight Rest API Client Extension for Visual Studio Code, hand-crafted by Ranga Vadhineni with simple and clean design.<br>要注意的是 该插件基于远程运行（既本体在虚拟机&#x2F;服务器上），在测试的时候请确保url指向正确。<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108709.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="image.png"></p>
+<h2 id="ExtensionRecommend"><a href="#ExtensionRecommend" class="headerlink" title="ExtensionRecommend"></a>ExtensionRecommend</h2><h3 id="Thunder-Client"><a href="#Thunder-Client" class="headerlink" title="Thunder Client"></a>Thunder Client</h3><p>Thunder Client is a lightweight Rest API Client Extension for Visual Studio Code, hand-crafted by Ranga Vadhineni with simple and clean design.<br>要注意的是 该插件基于远程运行（既本体在虚拟机&#x2F;服务器上），在测试的时候请确保url指向正确。<br><img src="https://nssctf.wdf.ink//img/WDTJ/202302072108709.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 
                 
               </div>
@@ -479,7 +479,7 @@
     
       <span class="category-chain">
         
-  <a href="/ProbiusOfficial/ProbiusOfficial.github.io/categories/Develop/" class="category-chain-item">Develop</a>
+  <a href="/categories/Develop/" class="category-chain-item">Develop</a>
   
   
 
@@ -494,7 +494,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/ProbiusOfficial/ProbiusOfficial.github.io/tags/Docker/">#Docker</a>
+        <a href="/tags/Docker/">#Docker</a>
       
     </div>
   
@@ -507,7 +507,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Build-Your-Remote-Linux-Docker</div>
-      <div>https://github.com/ProbiusOfficial/ProbiusOfficial.github.io/2022/11/29/Build-Your-Remote-Linux-Docker/</div>
+      <div>https://blog.probius.xyz/2022/11/29/Build-Your-Remote-Linux-Docker/</div>
     </div>
     <div class="license-meta">
       
@@ -551,7 +551,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/ProbiusOfficial/ProbiusOfficial.github.io/2023/02/07/Filter/" title="浅谈Filter链">
+                      <a href="/2023/02/07/Filter/" title="浅谈Filter链">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">浅谈Filter链</span>
                         <span class="visible-mobile">上一篇</span>
@@ -561,7 +561,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/ProbiusOfficial/ProbiusOfficial.github.io/2022/11/20/From-Jwt-To-The-XiangYunCup-FunWeb/" title="From Jwt To The XiangYunCup FunWeb">
+                      <a href="/2022/11/20/From-Jwt-To-The-XiangYunCup-FunWeb/" title="From Jwt To The XiangYunCup FunWeb">
                         <span class="hidden-mobile">From Jwt To The XiangYunCup FunWeb</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -746,8 +746,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/events.js" ></script>
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/plugins.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -769,7 +769,7 @@
 
 
   
-    <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/img-lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -868,7 +868,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -878,7 +878,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/boot.js" ></script>
+<script  src="/js/boot.js" ></script>
 
 
   

